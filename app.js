@@ -8,9 +8,34 @@ const ING_LINE_CHARACTER_LIMIT = 110;
 const ING_CHARACTER_LIMIT = 30;
 
 const importPath = path.join(__dirname, 'data/import/');
+const outputPath = path.join(__dirname, 'data/output/');
 
 // read all non-hidden files
 const files = fs.readdirSync(importPath).filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
+
+const copyFile = (source, target, cb) => {
+  let cbCalled = false;
+
+  let rd = fs.createReadStream(source);
+  rd.on("error", function(err) {
+    done(err);
+  });
+  let wr = fs.createWriteStream(target);
+  wr.on("error", function(err) {
+    done(err);
+  });
+  wr.on("close", function(ex) {
+    done();
+  });
+  rd.pipe(wr);
+
+  function done(err) {
+    if (!cbCalled) {
+      cb(err);
+      cbCalled = true;
+    }
+  }
+};
 
 const sanitizeEncoding = (line) => {
   line = line.trim();
@@ -53,7 +78,6 @@ const sanitizeEncoding = (line) => {
 };
 
 const parseRecipe = (file, id) => {
-	console.log('parsing recipe');
 	let ingredients = [];
 	let instructions = [];
 	let source;
@@ -94,7 +118,6 @@ const parseRecipe = (file, id) => {
 
     			//check for valid ingredients
     			ingredientObject.ingredient.forEach((ing, index) => {
-    				if (index > 0) { console.log('MULTIPLE ' + ingredientObject.ingredient); }
     				const ingredientDB = fs.readFileSync('./ingredients.json', 'utf-8');
 
     				// if its a valid ingredient then go ahead and accept the ingredient line
@@ -163,7 +186,7 @@ const parseRecipe = (file, id) => {
 const importHtml = (file, id) => {
 	return new Promise((resolve, reject) => {
 		fs.readFile(importPath + file, 'utf-8', (err, data) => {
-			if (err) { return reject(err); }
+			if (err) return reject(err);
 
 			//parse file
 			const parsed = parseRecipe(file, id);
@@ -177,14 +200,22 @@ const importHtml = (file, id) => {
 				imgPath: parsed.imgPath
 			};
 
-			console.log(JSON.stringify(recipe, null, 2));
-
 			resolve(recipe, file);
 		});
 	})
 };
 
-const importImg = (file, id) => {
+const importImg = (imgPath, img, id, index) => {
+	return new Promise((resolve, reject) => {
+		//console.log('INPUT - ' + imgPath + img);
+		//console.log('OUTPUT - '+ outputPath + ('images/' + id + ((index) ? '-' + index : null)));
+		// rename image and move it to the output
+    copyFile(imgPath + '/' + img, outputPath + ('images/' + id + ((index) ? '-' + index : '')), (err) => {
+      if (err) return reject(err);
+      
+	    resolve();
+    });
+	})
 };
 
 let pendingContent = [];
@@ -211,16 +242,18 @@ files.forEach(file => {
 
 		importHtml(file, id)
 			.then((recipe, data) => {
-				console.log('done importing recipe ' + recipe.id);
-				//write new file
+				console.log('🍕 finished parsing: ' + recipe.title);
+				fs.writeFileSync('./data/output/' + id + '.json', JSON.stringify(recipe, null, 2), 'utf8', function (err) {
+			    if (err) return console.log(err);
+			  });
 			})
 			.then(data => {
 				//copy original to archive
-				console.log('archiving file');
+				//console.log('archiving file');
 			})
 			.then(data => {
 				//remove file
-				console.log('removing file');
+				//console.log('removing file');
 			})
 			.catch(console.error);
 	}
@@ -235,11 +268,16 @@ files.forEach(file => {
 		} else {
 			// otherwise create a new id and add it to the pendingContent array
 			id = uuid.v1();
-			pendingImages.push({ id: id, path: filename});
+			pendingImages.push({ id: id, path: filename });
 		}
 
-		// import img
-		importImg(file, id);
+		const images = fs.readdirSync(importPath + file);
+
+		images.forEach((img, index) => {
+			importImg(importPath + file, img, id, index);
+			console.log('📷 finished importing: ' + file);
+		});
+
 	}
 		
 });
