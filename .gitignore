@@ -3,3 +3,4 @@ node_modules/
 data/
 client/node_modules/
 client/yarn.lock
+client/public/images/
