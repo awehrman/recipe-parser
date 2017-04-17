@@ -39,9 +39,6 @@
     "ingredient": "water"
   },
   {
-    "ingredient": "roasted peanuts"
-  },
-  {
     "ingredient": "olive oil"
   },
   {
@@ -247,15 +244,12 @@
   },
   {
     "ingredient": "basil"
-  },
-  {
-    "ingredient": "boneless pork chop cutlets"
-  },
+  }
   {
     "ingredient": "chinese rice wine vinegar"
   },
   {
-    "ingredient": "garlic cloves"
+    "ingredient": "garlic"
   },
   {
     "ingredient": "five-spice powder"
@@ -543,9 +537,6 @@
     "ingredient": "heavy cream"
   },
   {
-    "ingredient": "garnish"
-  },
-  {
     "ingredient": "golden sesame"
   },
   {
@@ -673,9 +664,6 @@
   },
   {
     "ingredient": "cilantro"
-  },
-  {
-    "ingredient": "bone-in chicken legs"
   },
   {
     "ingredient": "black soy sauce"
@@ -877,9 +865,6 @@
   },
   {
     "ingredient": "extra-virgin olive oil"
-  },
-  {
-    "ingredient": "kebab sticks"
   },
   {
     "ingredient": "chana daal"
@@ -1194,9 +1179,6 @@
     "ingredient": "baby pickling onions"
   },
   {
-    "ingredient": "flat metal skewers"
-  },
-  {
     "ingredient": "horseradish"
   },
   {
@@ -1216,9 +1198,6 @@
   },
   {
     "ingredient": "pork tenderloins"
-  },
-  {
-    "ingredient": "assorted mushrooms"
   },
   {
     "ingredient": "plain greek yoghurt"
@@ -1258,9 +1237,6 @@
   },
   {
     "ingredient": "corn husks"
-  },
-  {
-    "ingredient": "pure rosewater"
   },
   {
     "ingredient": "roses"
@@ -1365,9 +1341,6 @@
     "ingredient": "gold kiwifruit"
   },
   {
-    "ingredient": "red or green amaranth"
-  },
-  {
     "ingredient": "dates"
   },
   {
@@ -1438,9 +1411,6 @@
   },
   {
     "ingredient": "duck marylands"
-  },
-  {
-    "ingredient": "flat pancetta"
   },
   {
     "ingredient": "pappardelle"
@@ -1710,9 +1680,6 @@
     "ingredient": "kaffir lime leaves"
   },
   {
-    "ingredient": "smooth peanut butter"
-  },
-  {
     "ingredient": "instant ramen"
   },
   {
@@ -1725,9 +1692,6 @@
     "ingredient": "chili oil"
   },
   {
-    "ingredient": "sticks immitation crab meat"
-  },
-  {
     "ingredient": "spicy japanese mustard"
   },
   {
@@ -1738,5 +1702,116 @@
   },
   {
     "ingredient": "cannabis flower"
+  },
+  {
+    "ingredient": "avocado oil"
+  },
+  {
+    "ingredient": "garbanzo bean flour"
+  },
+  {
+    "ingredient": "sichuan peppercorn seeds"
+  },
+  {
+    "ingredient": "grapeseed oil"
+  },
+  {
+    "ingredient": "bud"
+  },
+  {
+    "ingredient": "distilled water"
+  },
+  {
+    "ingredient": "whipped cream"
+  },
+  {
+    "ingredient": "white balsamic vinegar"
+  },
+  {
+    "ingredient": "pumpkin puree"
+  },
+  {
+    "ingredient": "lamb tail fat"
+  },
+  {
+    "ingredient": "beef dripping"
+  },
+  {
+    "ingredient": "sweet potato noodles"
+  },
+  {
+    "ingredient": "green tea powder"
+  },
+  {
+    "ingredient": "plain full fat yoghurt"
+  },
+  {
+    "ingredient": "rosewater"
+  },
+  {
+    "ingredient": "immitation crab meat"
+  },
+  {
+    "ingredient": "peanut butter"
+  },
+  {
+    "ingredient": "chicken legs"
+  },
+  {
+    "ingredient": "pork chop cutlets"
+  },
+  {
+    "ingredient": "hazelnuts"
+  },
+  {
+    "ingredient": "country bread"
+  },
+  {
+    "ingredient": "dark honey"
+  },
+  {
+    "ingredient": "cayenne pepper"
+  },
+  {
+    "ingredient": "beetroots"
+  },
+  {
+    "ingredient": "potatoes"
+  },
+  {
+    "ingredient": "tarragon leaves"
+  },
+  {
+    "ingredient": "ice water"
+  },
+  {
+    "ingredient": "floral honey"
+  },
+  {
+    "ingredient": "cashews"
+  },
+  {
+    "ingredient": "chicken pieces"
+  },
+  {
+    "ingredient": "curry leaves"
+  },
+  {
+    "ingredient": "double cream"
+  },
+  {
+    "ingredient": "spicy italian sausage"
+  },
+  {
+    "ingredient": "garlic tahini"
+  },
+  {
+    "ingredient": "chicken thighs"
+  },
+  {
+    "ingredient": "lime wedges"
+  },
+  {
+    "ingredient": "cows foot"
   }
 ]

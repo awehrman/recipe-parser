@@ -37,6 +37,22 @@ const copyFile = (source, target, cb) => {
   }
 };
 
+const removeDirectoryContents = (path) => {
+  if ( fs.existsSync(path) ) {
+    fs.readdirSync(path).forEach((file, index) => {
+      const curPath = path + "/" + file;
+
+      if (fs.lstatSync(curPath).isDirectory()) { // recurse
+        removeDirectoryContents(curPath);
+      } else { // delete file
+        fs.unlinkSync(curPath);
+      }
+    });
+
+    fs.rmdirSync(path);
+  }
+};
+
 const sanitizeEncoding = (line) => {
   line = line.trim();
   //reduce multiple spaces to a single space
@@ -103,7 +119,7 @@ const parseRecipe = (file, id) => {
     	if (line.length < ING_LINE_CHARACTER_LIMIT) {
     		let parsed = false;
     		let ingredientObject;
-    		
+
     		try {
     			ingredientObject = parser.parse(line.toLowerCase());
     			parsed = true;
@@ -124,17 +140,17 @@ const parseRecipe = (file, id) => {
 						if (ingredientDB.includes(ing)) {
     					ingredientObject.ingredient[index] = { name: ing, validated: true };
 						} else {
-						// if this is an unverified ingredient check 
+						// if this is an unverified ingredient check
 							if (ing.length > ING_CHARACTER_LIMIT) {
 	    					parsed = false;
 	    				} else {
 	    					//flag this new ingredient as unverified
 	    					ingredientObject.ingredient[index] = { name: ing, validated: false };
-    						
+
     						const pendingDB = fs.readFileSync('./pendingIngredients.json', 'utf-8');
 
 	              if (!pendingDB.includes(ing)) {
-	              	let data = JSON.parse(pendingDB);	
+	              	let data = JSON.parse(pendingDB);
 		              data.push({ ingredient: ing });
 
 		              fs.writeFileSync('./pendingIngredients.json', JSON.stringify(data, null, 2), 'utf8', function (err) {
@@ -155,7 +171,7 @@ const parseRecipe = (file, id) => {
     	} else {
     		instructions.push(line);
     	}
-    } 
+    }
 	});
 
 	// lookup the source-url from the meta tags
@@ -207,12 +223,11 @@ const importHtml = (file, id) => {
 
 const importImg = (imgPath, img, id, index) => {
 	return new Promise((resolve, reject) => {
-		//console.log('INPUT - ' + imgPath + img);
-		//console.log('OUTPUT - '+ outputPath + ('images/' + id + ((index) ? '-' + index : null)));
+		const fileExt = img.split('.').pop();
 		// rename image and move it to the output
-    copyFile(imgPath + '/' + img, outputPath + ('images/' + id + ((index) ? '-' + index : '')), (err) => {
+    copyFile(imgPath + '/' + img, outputPath + ('images/' + id + ((index) ? '-' + index + '.' + fileExt : '.' + fileExt)), (err) => {
       if (err) return reject(err);
-      
+
 	    resolve();
     });
 	})
@@ -221,7 +236,12 @@ const importImg = (imgPath, img, id, index) => {
 let pendingContent = [];
 let pendingImages = [];
 
-files.forEach(file => {
+let recipesCollection = [];
+let importedCount = 0;
+
+const self = this;
+
+files.forEach((file, index, collection) => {
 	const filePath = path.join(importPath, file);
 	const fileType = filePath.split('.').pop();
 	const filename = filePath.split('.' + fileType)[0];
@@ -246,18 +266,33 @@ files.forEach(file => {
 				fs.writeFileSync('./data/output/' + id + '.json', JSON.stringify(recipe, null, 2), 'utf8', function (err) {
 			    if (err) return console.log(err);
 			  });
+
+			  recipesCollection.push(recipe);
 			})
 			.then(data => {
 				//copy original to archive
 				//console.log('archiving file');
-			})
-			.then(data => {
+
 				//remove file
-				//console.log('removing file');
+				console.log('removing file ' + filePath);
+				fs.unlinkSync(filePath);
+			})
+			.then(() => {
+				// generate the master file if we're at the end of our import
+				importedCount++;
+
+				if (importedCount === ((collection.length + 1) / 2)) {
+					// save recipe master
+					fs.writeFileSync('./data/output/_master.json', JSON.stringify(recipesCollection, null, 2), 'utf8', function (err) {
+				    if (err) return console.log(err);
+				  });
+				  console.log('💯 wrote master');
+
+				}
 			})
 			.catch(console.error);
 	}
-		
+
 	if (fileType === 'resources') {
 		// determine if we've imported this recipe's content data yet or not
 		const contentImported = pendingContent.filter(data => data.path.includes(filename));
@@ -272,13 +307,20 @@ files.forEach(file => {
 		}
 
 		const images = fs.readdirSync(importPath + file);
+		const numImages = images.length;
 
 		images.forEach((img, index) => {
-			importImg(importPath + file, img, id, index);
+			importImg(importPath + file, img, id, index)
+			.then(() => {
+				if (index + 1 === numImages) {
+					console.log('removing image directory ' + filePath);
+					removeDirectoryContents(filePath);
+				}
+			})
+			.catch(console.error);
 			console.log('📷 finished importing: ' + file);
 		});
-
 	}
-		
+
 });
 

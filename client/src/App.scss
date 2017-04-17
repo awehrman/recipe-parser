@@ -1,0 +1,63 @@
+body {
+	box-sizing: border-box;
+	margin: 0;
+
+	.container {
+	  margin: 0 auto;
+	  max-width: 1200px;
+	  padding: 0 1rem;
+
+	  .responsive-image {
+		  max-width: 100%;
+		}
+
+		.cell img {
+		  display: block;
+		}
+
+		.cell {
+			border-radius: 2px;
+		  background: #56d68d;
+		  margin: 1rem;
+		  text-decoration: none;
+		  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  		transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+		  .title {
+		  	color: #fff;
+		  	padding: 1rem;
+		  }
+		}
+
+		.cell:hover {
+  		background: #48C9B0;
+  		transition: 1s;
+  	}
+
+  	.recipe {
+	    background: lightsalmon;
+	    width: 100%;
+		}
+	}
+}
+
+@media screen and (min-width: 600px) {
+ .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .recipe {
+    }
+  }
+
+  .cell {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .cell {
+    width: calc(33.3333% - 2rem);
+  }
+}

@@ -1,6 +1,6 @@
 start
   = ingredientLine
-  
+
 ingredientLine
   = amount:(amount)? (ws+)?
     ignore?
@@ -25,32 +25,32 @@ ingredientLine
         comment: comment
       };
   }
-  
-multipleIngredientDesc 
- = first:(ingredientDesc)? (ws+)? 
+
+multipleIngredientDesc
+ = first:(ingredientDesc)? (ws+)?
    second:(ingredientDesc)? (ws+)?
    third:(ingredientDesc)? (ws+)?
-   { 
+   {
      let descriptions = [];
      (first) ? descriptions.push(first) : null;
      (second) ? descriptions.push(second) : null;
      (third) ? descriptions.push(third) : null;
-     
+
      return descriptions;
-   }  
-   
-multipleUnitDesc 
- = first:(unitDesc)? (ws+)? 
+   }
+
+multipleUnitDesc
+ = first:(unitDesc)? (ws+)?
    second:(unitDesc)? (ws+)?
    third:(unitDesc)? (ws+)?
-   { 
+   {
      let descriptions = [];
      (first) ? descriptions.push(first) : null;
      (second) ? descriptions.push(second) : null;
      (third) ? descriptions.push(third) : null;
-     
+
      return descriptions;
-   } 
+   }
 
 ws
   = ' '
@@ -106,7 +106,7 @@ punctuation
   / [.]
   / [!]
   / [?]
-  
+
 ignore
   = $(ws* "a" ws+)
   / $(ws* "an" ws+)
@@ -200,14 +200,14 @@ quart
 tablespoon
   = 'tablespoons'i
   / 'tablespoon'i
+  / 'tbsps'i
   / 'tbsp.'i
   / 'tbsp'i
   / 'tbs.'i
   / 'tbs'i
+  / 'tbl'i
   / 'T.'
   / 'T'
-  / 'tbl'i
-  / 'tbsps'i
 
 teaspoon
   = 'teaspoons'i
@@ -238,14 +238,15 @@ kilogram
   = 'kilograms'i
   / 'kilogram'i
   / 'kg.'i
+  / 'kgs'i
   / 'kg'i
 
 liter
   = 'liters'i
+  / 'litres'i
   / 'liter'i
   / 'l.'i
   / 'l'i
-  / 'litres'i
 
 milligram
   = 'milligrams'i
@@ -258,72 +259,88 @@ milliliter
   / 'milliliter'i
   / 'ml.'i
   / 'ml'i
- 
+
 imprecise_unit
-  = pinch
-  / dash
-  / touch
-  / handful
-  / 'pieces'i
-  / 'piece'i
-  / 'bowls'i
-  / 'bowl'i
-  / 'few'i
-  / 'cans'i
-  / 'can'i
-  / 'small'i
-  / 'medium'i
-  / 'large'i
-  / 'bunch'i
-  / 'big'i
-  / 'ears'i
-  / 'ear'i
-  / 'ea'i
-  / 'handful'i
-  / 'heads'i
-  / 'head'i
-  / 'knobs'i
-  / 'knob'i
-  / 'cm'i
-  / 'sprinkle'i
-  / 'bricks'i
-  / 'brick'i
-  / 'bunches'i
-  / 'bunch'i
-  / 'cubes'i
-  / 'cube'i
-  / 'drops'i
-  / 'drop'i
-  / 'leaves'i
-  / 'leaf'i
-  / 'slices'i
-  / 'slice'i
-  / 'sprigs'i
-  / 'sprig'i
-  / 'strips'i
-  / 'strip'i
-  / 'some'i
-  / 'stalks'i
-  / 'stalk'i
-  / 'turns'i
-  / 'recipe'i
-
-pinch
-  = 'pinches'i
-  / 'pinch'i
-  / 'generous pinch'i
-
-dash
-  = 'dashes'i
-  / 'dash'i
-
-touch
-  = 'touches'i
-  / 'touch'i
-
-handful
-  = 'handfuls'i
-  / 'handful'i
+  = 'generous pinch'i
+/ 'sprigs of'i
+/ 'splash of'i
+/ 'slices of'i
+/ 'pinch of'i
+/ 'drops of'i
+/ 'piece of'i
+/ 'stick of'i
+/ 'handfuls'i
+/ 'stalk of'i
+/ 'sprinkle'i
+/ 'handful'i
+/ 'touches'i
+/ 'pinches'i
+/ 'handful'i
+/ 'bunches'i
+/ 'splash'i
+/ 'inches'i
+/ 'rounds'i
+/ 'can of'i
+/ 'dashes'i
+/ 'pieces'i
+/ 'medium'i
+/ 'bricks'i
+/ 'leaves'i
+/ 'slices'i
+/ 'sprigs'i
+/ 'strips'i
+/ 'stalks'i
+/ 'sticks'i
+/ 'recipe'i
+/ 'loaves'i
+/ 'sheet'i
+/ 'piece'i
+/ 'extra'i
+/ 'stick'i
+/ 'touch'i
+/ 'pinch'i
+/ 'piece'i
+/ 'bowls'i
+/ 'small'i
+/ 'large'i
+/ 'bunch'i
+/ 'heads'i
+/ 'knobs'i
+/ 'brick'i
+/ 'bunch'i
+/ 'cubes'i
+/ 'drops'i
+/ 'slice'i
+/ 'sprig'i
+/ 'strip'i
+/ 'stalk'i
+/ 'turns'i
+/ 'loave'i
+/ 'packs'i
+/ 'loaf'i
+/ 'glug'i
+/ 'inch'i
+/ 'unit'i
+/ 'dash'i
+/ 'bowl'i
+/ 'cans'i
+/ 'ears'i
+/ 'head'i
+/ 'knob'i
+/ 'cube'i
+/ 'drop'i
+/ 'leaf'i
+/ 'some'i
+/ 'pack'i
+/ 'can'i
+/ 'few'i
+/ 'can'i
+/ 'big'i
+/ 'ear'i
+/ 'in'i
+/ 'li'i
+/ 'ea'i
+/ 'cm'i
 
 container
   = '(' amount:$(amount)* ws* unit:$(containerizedUnit)* ')' {
@@ -342,55 +359,90 @@ unitDesc
   / 'large'i
   / 'big'i
   / 'serving'i
+  / 'heaping'i
 
 ingredientDesc
   = commonDesc
-  / 'canned'i
-  / 'chilled'i
-  / 'chopped'i
-  / 'coarsely'i
-  / 'coarse'i
-  / 'cold'i
-  / 'cooked'i
-  / 'cracked'i
-  / 'crushed'i
-  / 'diced'i
-  / 'dried'i
-  / 'dry'i
-  / 'fatty'i
-  / 'fat'i
-  / 'finely'i
-  / 'fine'i
-  / 'freshly'i
-  / 'fresh'i
-  / 'frozen'i
-  / 'good'i
-  / 'ground'i
-  / 'homemade'i
-  / 'hot'i
-  / 'leftover'i
-  / 'mashed'i
-  / 'melted'i
-  / 'minced'i
-  / 'nonstick'i
-  / 'pitted'i
-  / 'regular'i
-  / 'room-temperature'i
-  / 'roughly'i
-  / 'shaved'i
-  / 'shredded'i
-  / 'sliced'i
-  / 'soft'i
-  / 'steamed'i
-  / 'thinly'i
-  / 'thin'i
-  / 'thick cut'i
-  / 'thick'i
-  / 'tinned'i
-  / 'toasted'i
-  / 'unsalted'i
-  / 'warm'i
-  / 'whole'i
+/ 'room-temperature'i
+/ 'freshly ground'i
+/ 'medium-bodied'i
+/ 'low-sodium'i
+/ 'low sodium'i
+/ 'vine-ripe'i
+/ 'thick cut'i
+/ 'uncooked'i
+/ 'boneless'i
+/ 'assorted'i
+/ 'blanched'i
+/ 'unsalted'i
+/ 'shredded'i
+/ 'lukewarm'i
+/ 'nonstick'i
+/ 'leftover'i
+/ 'homemade'i
+/ 'coarsely'i
+/ 'quality'i
+/ 'organic'i
+/ 'skin-on'i
+/ 'roasted'i
+/ 'day old'i
+/ 'day-old'i
+/ 'bone in'i
+/ 'bone-in'i
+/ 'toasted'i
+/ 'steamed'i
+/ 'roughly'i
+/ 'regular'i
+/ 'freshly'i
+/ 'crushed'i
+/ 'cracked'i
+/ 'chopped'i
+/ 'chilled'i
+/ 'peeled'i
+/ 'floury'i
+/ 'packed'i
+/ 'tinned'i
+/ 'thinly'i
+/ 'sliced'i
+/ 'shaved'i
+/ 'smooth'i
+/ 'pitted'i
+/ 'minced'i
+/ 'melted'i
+/ 'mashed'i
+/ 'ground'i
+/ 'frozen'i
+/ 'finely'i
+/ 'cooked'i
+/ 'coarse'i
+/ 'canned'i
+/ 'crispy'i
+/ 'sized'i
+/ 'whole'i
+/ 'runny'i
+/ 'thick'i
+/ 'fresh'i
+/ 'fatty'i
+/ 'dried'i
+/ 'diced'i
+/ 'flat'i
+/ 'ripe'i
+/ 'pure'i
+/ 'best'i
+/ 'very'i
+/ 'warm'i
+/ 'torn'i
+/ 'aged'i
+/ 'thin'i
+/ 'soft'i
+/ 'good'i
+/ 'fine'i
+/ 'cold'i
+/ 'good'i
+/ 'raw'i
+/ 'hot'i
+/ 'fat'i
+/ 'dry'i
 
 ingredient
   = first:$(phrase) ws* '/' ws* second:$(phrase) {
@@ -405,11 +457,11 @@ ingredient
           return str.trim();
       });
     }
-  
-    
+
+
 alphanumericPhrase
   = $(mixedWord (space mixedWord)*)
-  
+
 mixedWord
   = letter+
   / integer+
@@ -427,6 +479,5 @@ comment
      (phrase2) ? phrases.push(phrase2) : null;
      return phrases;
   }
-  
-  
-  
+
+

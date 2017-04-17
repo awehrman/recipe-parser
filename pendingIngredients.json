@@ -1,27 +1,18 @@
 [
   {
-    "ingredient": "dark honey"
-  },
-  {
     "ingredient": "pepper to taste"
-  },
-  {
-    "ingredient": "stick of butter"
   },
   {
     "ingredient": "chickenor vegetablestock"
   },
   {
-    "ingredient": "day-old country bread"
-  },
-  {
     "ingredient": "can san marzano tomatoes"
   },
   {
-    "ingredient": "unit fresh cayenne pepper"
+    "ingredient": "cloves garlic"
   },
   {
-    "ingredient": "cloves garlic"
+    "ingredient": "garlic cloves"
   },
   {
     "ingredient": "oil for deep frying"
@@ -30,31 +21,16 @@
     "ingredient": "when half cooked"
   },
   {
-    "ingredient": "garbanzo bean flour"
-  },
-  {
     "ingredient": "pepper each"
   },
   {
-    "ingredient": "avocado oil"
-  },
-  {
     "ingredient": "roma tomato sliced"
-  },
-  {
-    "ingredient": "extra salt"
   },
   {
     "ingredient": "pepper to sprinkle on top"
   },
   {
     "ingredient": "bean seasoning"
-  },
-  {
-    "ingredient": "litres good chicken"
-  },
-  {
-    "ingredient": "sized beetroots"
   },
   {
     "ingredient": "red thai chilestemmed"
@@ -69,13 +45,16 @@
     "ingredient": "sea salt to taste"
   },
   {
+    "ingredient": "virgin olive oil for drizzling"
+  },
+  {
     "ingredient": "other long-strand pasta"
   },
   {
     "ingredient": "one 3-pound chicken"
   },
   {
-    "ingredient": "peeled ginger"
+    "ingredient": "garnish"
   },
   {
     "ingredient": "lawyer"
@@ -174,12 +153,6 @@
     "ingredient": "fried garlic"
   },
   {
-    "ingredient": "bunches scallions"
-  },
-  {
-    "ingredient": "low sodium chicken broth"
-  },
-  {
     "ingredient": "rounds fresh ginger"
   },
   {
@@ -195,10 +168,7 @@
     "ingredient": "garlic cloves sliced"
   },
   {
-    "ingredient": "inch root ginger"
-  },
-  {
-    "ingredient": "sichuan peppercorn seeds"
+    "ingredient": "root ginger"
   },
   {
     "ingredient": "as needed"
@@ -210,9 +180,6 @@
     "ingredient": "green bell peppersstemmed"
   },
   {
-    "ingredient": "vine-ripe tomato"
-  },
-  {
     "ingredient": "can crushed tomato"
   },
   {
@@ -222,22 +189,13 @@
     "ingredient": "small red chiles"
   },
   {
-    "ingredient": "crispy shallots"
-  },
-  {
     "ingredient": "grass-fed butter"
   },
   {
     "ingredient": "super fine almond flour"
   },
   {
-    "ingredient": "lukewarm milk"
-  },
-  {
-    "ingredient": "lukewarm water"
-  },
-  {
-    "ingredient": "splash of elderflower cordial"
+    "ingredient": "elderflower cordial"
   },
   {
     "ingredient": "puff pastry sheet"
@@ -247,6 +205,9 @@
   },
   {
     "ingredient": "can tomato paste"
+  },
+  {
+    "ingredient": "kebab sticks"
   },
   {
     "ingredient": "dry fruits of your choice"
@@ -300,31 +261,16 @@
     "ingredient": "carrot chopped"
   },
   {
-    "ingredient": "medium-bodied red wine"
-  },
-  {
     "ingredient": "virgin olive oil salt"
   },
   {
-    "ingredient": "floury potatoes"
-  },
-  {
-    "ingredient": "blanched hazelnuts"
-  },
-  {
-    "ingredient": "packed small mint leaves"
-  },
-  {
-    "ingredient": "packed tarragon leaves"
+    "ingredient": "small mint leaves"
   },
   {
     "ingredient": "squeeze lemon juice"
   },
   {
     "ingredient": "rosemary sprigs"
-  },
-  {
-    "ingredient": "grapeseed oil"
   },
   {
     "ingredient": "leaves of swiss chard"
@@ -336,19 +282,10 @@
     "ingredient": "round dumpling wrappers"
   },
   {
-    "ingredient": "aged balsamic vinegar"
-  },
-  {
-    "ingredient": "loaf french bread"
+    "ingredient": "french bread"
   },
   {
     "ingredient": "i small handful fresh spinach"
-  },
-  {
-    "ingredient": "tbsps ketchup"
-  },
-  {
-    "ingredient": "tbsps cilantro"
   },
   {
     "ingredient": "celery curls"
@@ -357,19 +294,10 @@
     "ingredient": "carrot sticks"
   },
   {
-    "ingredient": "bud"
-  },
-  {
-    "ingredient": "distilled water"
-  },
-  {
     "ingredient": "tea strainer"
   },
   {
     "ingredient": "or large-size pot"
-  },
-  {
-    "ingredient": "ice water"
   },
   {
     "ingredient": "french press coffeemaker"
@@ -402,13 +330,13 @@
     "ingredient": "large shrimp"
   },
   {
-    "ingredient": "quality floral honey"
-  },
-  {
-    "ingredient": "raw sugar to sprinkle"
+    "ingredient": "sugar to sprinkle"
   },
   {
     "ingredient": "srirracha sauce to serve"
+  },
+  {
+    "ingredient": "tbsp"
   },
   {
     "ingredient": "tsp"
@@ -447,12 +375,6 @@
     "ingredient": "other short-grain rice"
   },
   {
-    "ingredient": "sweet potato noodles"
-  },
-  {
-    "ingredient": "runny honey"
-  },
-  {
     "ingredient": "spinach marinade"
   },
   {
@@ -483,15 +405,6 @@
     "ingredient": "kimchi with juices"
   },
   {
-    "ingredient": "lime wedges"
-  },
-  {
-    "ingredient": "cows foot"
-  },
-  {
-    "ingredient": "splash soy sauce"
-  },
-  {
     "ingredient": "fresno chilestemmed"
   },
   {
@@ -501,64 +414,22 @@
     "ingredient": "spicy chili crisp"
   },
   {
-    "ingredient": "whipped cream"
-  },
-  {
-    "ingredient": "uncooked bucatini"
-  },
-  {
-    "ingredient": "white balsamic vinegar"
-  },
-  {
-    "ingredient": "raw cashews"
-  },
-  {
-    "ingredient": "chicken pieces"
-  },
-  {
-    "ingredient": "inch fresh ginger"
-  },
-  {
-    "ingredient": "packs fresh curry leaves"
-  },
-  {
     "ingredient": "per person of squash"
   },
   {
     "ingredient": "slices of fresh ginger root"
   },
   {
-    "ingredient": "can sweetened condensed milk"
+    "ingredient": "cress to serve"
   },
   {
-    "ingredient": "green tea powder"
+    "ingredient": "can sweetened condensed milk"
   },
   {
     "ingredient": "extra green tea powder"
   },
   {
-    "ingredient": "glug double cream"
-  },
-  {
-    "ingredient": "cress to serve"
-  },
-  {
-    "ingredient": "best quality cheddar cheese"
-  },
-  {
-    "ingredient": "packed fresh cilantro leaves"
-  },
-  {
-    "ingredient": "organic celery"
-  },
-  {
-    "ingredient": "organic carrot"
-  },
-  {
     "ingredient": "bayleaves"
-  },
-  {
-    "ingredient": "uncooked spicy italian sausage"
   },
   {
     "ingredient": "s of hot fries"
@@ -570,28 +441,16 @@
     "ingredient": "medium-large white cabbage"
   },
   {
-    "ingredient": "skin-on yellow onion"
-  },
-  {
     "ingredient": "heads garlic"
-  },
-  {
-    "ingredient": "very thinly sliced scallions"
   },
   {
     "ingredient": "tokyo negi"
   },
   {
-    "ingredient": "pumpkin puree"
-  },
-  {
     "ingredient": "dough for ravioli"
   },
   {
-    "ingredient": "raw almonds"
-  },
-  {
-    "ingredient": "pure maple syrup"
+    "ingredient": "red or green amaranth"
   },
   {
     "ingredient": "harive soppu"
@@ -621,28 +480,13 @@
     "ingredient": "salsa of your choice"
   },
   {
-    "ingredient": "organic whole chicken"
-  },
-  {
-    "ingredient": "quality broth"
-  },
-  {
     "ingredient": "celery ribs"
   },
   {
-    "ingredient": "low-sodium chicken stock"
-  },
-  {
     "ingredient": "lemongrass stalk"
-  },,
+  },
   {
     "ingredient": "cilantro sprigs"
-  },
-  {
-    "ingredient": "roasted garlic"
-  },
-  {
-    "ingredient": "roasted garlic tahini"
   },
   {
     "ingredient": "rice spices"
@@ -672,25 +516,16 @@
     "ingredient": "rice to serve"
   },
   {
-    "ingredient": "low-sodium chicken broth"
-  },
-  {
-    "ingredient": "torn breadcrumbs"
-  },
-  {
     "ingredient": "other short pasta"
   },
   {
-    "ingredient": "lamb tail fat"
+    "ingredient": "metal skewers"
   },
   {
     "ingredient": "each of sumac"
   },
   {
     "ingredient": "serve immediately"
-  },
-  {
-    "ingredient": "beef dripping"
   },
   {
     "ingredient": "x sweetcorn cobs"
@@ -708,10 +543,10 @@
     "ingredient": "prepared pad thai sauce"
   },
   {
-    "ingredient": "heaping cup"
+    "ingredient": "parmigiano cheese to grate"
   },
   {
-    "ingredient": "boneless chicken thighs"
+    "ingredient": "virgin olive oil to drizzle"
   },
   {
     "ingredient": "clove of garlic"
@@ -721,9 +556,6 @@
   },
   {
     "ingredient": "to medium carrot"
-  },
-  {
-    "ingredient": "plain full fat yoghurt"
   },
   {
     "ingredient": "ened butter"
