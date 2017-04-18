@@ -13,8 +13,9 @@ ingredientLine
     ingredientDesc:multipleIngredientDesc
     ignore?
     ingredient:trimmedIngredient
-    ignore?
-    comment:(comment)? [\n]? {
+    //ignore?
+    //comment:(comment)? [\n]?
+    {
       return {
         amount: amount,
         unitDesc: unitDesc,
@@ -22,7 +23,7 @@ ingredientLine
         container: container,
         ingredientDesc: ingredientDesc,
         ingredient: ingredient.ingredient,
-        comment: comment || ingredient.reserved
+        comment: ingredient.reserved
       };
   }
 
@@ -120,6 +121,7 @@ word
   = $(letter+ dashes+ letter+) //"pre-heat"
   / $(integer+ dashes+ letter+) //"1-inch"
   / letter+ //"heat"
+  / '|'
 
 amount
   = $(integer* ws* unicode)
@@ -200,6 +202,7 @@ quart
 tablespoon
   = 'tablespoons'i
   / 'tablespoon'i
+  / 'tabespoon'i
   / 'tbsps'i
   / 'tbsp.'i
   / 'tbsp'i
@@ -262,6 +265,8 @@ milliliter
 
 imprecise_unit
   = 'generous pinch'i
+/ 'few turns'i
+/ 'few drops'i
 / 'sprigs of'i
 / 'splash of'i
 / 'slices of'i
@@ -334,7 +339,6 @@ imprecise_unit
 / 'leaf'i
 / 'some'i
 / 'pack'i
-/ 'can'i
 / 'few'i
 / 'can'i
 / 'big'i
@@ -360,6 +364,7 @@ unitDesc
   / 'medium'i
   / 'large'i
   / 'big'i
+  / 'servings'i
   / 'serving'i
   / 'heaping'i
 
@@ -383,6 +388,7 @@ ingredientDesc
 / 'leftover'i
 / 'homemade'i
 / 'coarsely'i
+/ 'softened'i
 / 'quality'i
 / 'organic'i
 / 'skin-on'i
@@ -419,6 +425,8 @@ ingredientDesc
 / 'coarse'i
 / 'canned'i
 / 'crispy'i
+/ 'round'i
+/ 'mixed'i
 / 'sized'i
 / 'whole'i
 / 'runny'i
@@ -446,20 +454,6 @@ ingredientDesc
 / 'fat'i
 / 'dry'i
 
-ingredient
-  = first:$(phrase) ws* '/' ws* second:$(phrase) {
-    return [first, second];
-  }
-  / phrase:phrase {
-      let ingredients = phrase.split(' or ');
-      if (ingredients.length === 1) {
-        ingredients = phrase.split(' and ');
-      }
-      return ingredients.map(str => {
-          return str.trim();
-      });
-    }
-
 alphanumericPhrase
   = $(mixedWord (space mixedWord)*)
 
@@ -481,29 +475,43 @@ comment
   }
   
 trimmedIngredient
- = ingredient:reservedPhraseConjunctionAND reserved:reservedComment { return { ingredient: ingredient, reserved: reserved }}
- / ingredient:reservedPhraseConjunctionOR reserved:reservedComment { return { ingredient: ingredient, reserved: reserved }}
- / ingredient:reservedPhraseConjunctionSLASH reserved:reservedComment { return { ingredient: ingredient, reserved: reserved }}
- / ingredient:reservedPhrase reserved:reservedComment { return { ingredient: ingredient, reserved: reserved }}
+ = ingredient:reservedPhrase reserved:reservedComment { return { ingredient: ingredient, reserved: reserved }}
+ / ingredient:ingredientPhrase { return { ingredient: ingredient }}
 
-reservedPhraseConjunctionAND
- = phrase:$(!reservedComment $(word) (ws* 'and' ws* $(!reservedComment $(word)))*) space*
-    {
-      let phr = phrase.split('and');
+ingredientPhrase
+ = phrase:phrase {
+  let phr = phrase.split(' and ');
+    if (phr.length !== 1) {
+     return { names: [phr[0].trim(), phr[1].trim()], conjunction: 'and'}
+    }
+  phr = phrase.split(' or ');
+    if (phr.length !== 1) {
+     return { names: [phr[0].trim(), phr[1].trim()], conjunction: 'or'}
+    }
+    phr = phrase.split(' | ');
+    if (phr.length !== 1) {
+     return { names: [phr[0].trim(), phr[1].trim()], conjunction: 'or'}
+    }
+    return { names: [phrase] }
+ }
+ 
+reservedPhrase
+  = phrase:$(!reservedComment $(word) (space $(!reservedComment $(word)))*) space* {
+      let phr = phrase.split(' and ');
       if (phr.length !== 1) {
         return { names: [phr[0].trim(), phr[1].trim()], conjunction: 'and'}
       }
-    }
-
-reservedPhraseConjunctionOR
- = phrase:$(!reservedComment $(word) (ws* 'or' ws* $(!reservedComment $(word)))*) space*
-    {
-      let phr = phrase.split('or');
+      phr = phrase.split(' or ');
       if (phr.length !== 1) {
         return { names: [phr[0].trim(), phr[1].trim()], conjunction: 'or'}
       }
+      phr = phrase.split(' | ');
+      if (phr.length !== 1) {
+        return { names: [phr[0].trim(), phr[1].trim()], conjunction: 'or'}
+      }
+      return { names: [phrase] }
     }
-    
+
 reservedPhraseConjunctionSLASH
  = phrase:$(!reservedComment $(word) (ws* '/' ws* $(!reservedComment $(word)))*) space*
     {
@@ -514,8 +522,25 @@ reservedPhraseConjunctionSLASH
     }
    
 
-reservedPhrase
-  = phrase:$(!reservedComment $(word) (space $(!reservedComment $(word)))*) space* { return phrase }
-
-reservedComment = 
- 'to taste'i
+reservedComment
+ = 'for shaping the dough'i
+ / 'to dust the pizza peel'i
+ / 'for dressing'i
+ / 'for deep frying'i
+ / 'for drizzling'i
+ / 'for dusting'i
+ / 'or as needed'i
+ / 'for garnish'i
+ / 'for rubbing'i
+ / 'for frying'i
+ / 'for sprinkling'i
+ / 'as needed'i
+ / 'as per taste'i
+ / 'for serving'i
+ / 'to taste'i
+ / 'for topping'i
+ / 'to serve'i
+ / 'for binding'i
+ / 'to drizzle'i
+ / 'to grate'i
+ / 'divided'i

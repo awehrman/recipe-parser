@@ -145,7 +145,7 @@ const parseRecipe = (file, id) => {
     			ingredientObject.parsed = true;
 
     			//check for valid ingredients
-    			ingredientObject.ingredient.forEach((ing, index) => {
+    			ingredientObject.ingredient.names.forEach((ing, index) => {
     				const ingredientDB = fs.readFileSync('./ingredients.json', 'utf-8');
 
 						if (ingredientDB.includes(ing)) {
