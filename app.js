@@ -143,6 +143,48 @@ const parseRecipe = (file, id) => {
     			ingredientObject = parser.parse(line.toLowerCase());
     			ingredientObject.ref = line;
     			ingredientObject.parsed = true;
+
+    			//check for valid ingredients
+    			ingredientObject.ingredient.forEach((ing, index) => {
+    				const ingredientDB = fs.readFileSync('./ingredients.json', 'utf-8');
+
+						if (ingredientDB.includes(ing)) {
+    					ingredientObject.ingredient[index] = { name: ing, validated: true };
+						} else {
+    					//flag this new ingredient as unverified
+    					ingredientObject.ingredient[index] = { name: ing, validated: false };
+
+    					//and update the pendingDB with new instances of wonky parsed ingredients
+  						const pendingDB = fs.readFileSync('./pendingIngredients.json', 'utf-8');
+
+  						//TODO add a count to the pending ingredients so we know how often these phrases occur
+  						let data = JSON.parse(pendingDB);
+
+              if (!pendingDB.includes(ing)) {
+	              data.push({ ingredient: ing, count: 0, recipes: [id], ref: [line] });
+	            } else {
+	            	//update count
+	            	data = JSON.parse(pendingDB);
+	            	for (let d in data) {
+	            		if (data[d].ingredient === ing) {
+	            			data[d].count += 1;
+	            			let recipes = data[d].recipes;
+	            			recipes.push(id);
+	            			let ref = data[d].ref;
+	            			ref.push(line)
+
+	            			data[d].recipes = recipes;
+	            			data[d].ref = ref;
+	            		}
+	            	}
+	            }
+
+              fs.writeFileSync('./pendingIngredients.json', JSON.stringify(data, null, 2), 'utf8', function (err) {
+						    if (err) return console.log(err);
+						  });
+
+    				}
+    			});
     		} catch (ex) {
     			ingredientObject = {
     				ref: line,
@@ -160,75 +202,6 @@ const parseRecipe = (file, id) => {
 
   //flatten our ingredients array
   ingredients = [].concat.apply([], ingredients);
-
-  console.log(ingredients);
-
-  // go through the recipe contents
-  /*level.each(function(i, elem) {
-    let line = $(this).text();
-
-    //strip out weird characters and fix our silent alt-space
-    line = sanitizeEncoding(line);
-
-    if (line !== undefined && line.length > 0) {
-
-    	if (line.length < ING_LINE_CHARACTER_LIMIT) {
-    		let parsed = false;
-    		let ingredientObject;
-
-    		try {
-    			ingredientObject = parser.parse(line.toLowerCase());
-    			parsed = true;
-    		} catch (ex) {
-    			//console.log(ex.message); // peg error
-    			// TODO collect error messages for review
-    			instructions.push(line);
-    		}
-
-    		if (parsed) {
-    			ingredientObject.ref = line;
-
-    			//check for valid ingredients
-    			ingredientObject.ingredient.forEach((ing, index) => {
-    				const ingredientDB = fs.readFileSync('./ingredients.json', 'utf-8');
-
-    				// if its a valid ingredient then go ahead and accept the ingredient line
-						if (ingredientDB.includes(ing)) {
-    					ingredientObject.ingredient[index] = { name: ing, validated: true };
-						} else {
-						// if this is an unverified ingredient check
-							if (ing.length > ING_CHARACTER_LIMIT) {
-	    					parsed = false;
-	    				} else {
-	    					//flag this new ingredient as unverified
-	    					ingredientObject.ingredient[index] = { name: ing, validated: false };
-
-    						const pendingDB = fs.readFileSync('./pendingIngredients.json', 'utf-8');
-
-	              if (!pendingDB.includes(ing)) {
-	              	let data = JSON.parse(pendingDB);
-		              data.push({ ingredient: ing });
-
-		              fs.writeFileSync('./pendingIngredients.json', JSON.stringify(data, null, 2), 'utf8', function (err) {
-								    if (err) return console.log(err);
-								  });
-	              }
-	    				}
-    				}
-    			});
-
-    			if (!parsed) {
-    				instructions.push(line);
-    			} else {
-						ingredients.push(ingredientObject);
-    			}
-    		}
-
-    	} else {
-    		instructions.push(line);
-    	}
-    }
-	});*/
 
 	// lookup the source-url from the meta tags
 	const meta = $('meta')
@@ -325,14 +298,14 @@ files.forEach((file, index, collection) => {
 
 			  recipesCollection.push(recipe);
 			})
-			/*.then(data => {
+			.then(data => {
 				//copy original to archive
 				//console.log('archiving file');
 
 				//remove file
 				console.log('removing file ' + filePath);
 				fs.unlinkSync(filePath);
-			})*/
+			})
 			.then(() => {
 				// generate the master file if we're at the end of our import
 				importedCount++;

@@ -1,569 +1,1908 @@
 [
   {
-    "ingredient": "pepper to taste"
-  },
-  {
-    "ingredient": "chickenor vegetablestock"
-  },
-  {
-    "ingredient": "can san marzano tomatoes"
-  },
-  {
-    "ingredient": "cloves garlic"
-  },
-  {
-    "ingredient": "garlic cloves"
-  },
-  {
-    "ingredient": "oil for deep frying"
-  },
-  {
-    "ingredient": "when half cooked"
-  },
-  {
-    "ingredient": "pepper each"
-  },
-  {
-    "ingredient": "roma tomato sliced"
-  },
-  {
-    "ingredient": "pepper to sprinkle on top"
-  },
-  {
-    "ingredient": "bean seasoning"
-  },
-  {
-    "ingredient": "red thai chilestemmed"
-  },
-  {
-    "ingredient": "freshly ground black pepper"
-  },
-  {
-    "ingredient": "black pepper to taste"
-  },
-  {
-    "ingredient": "sea salt to taste"
-  },
-  {
-    "ingredient": "virgin olive oil for drizzling"
-  },
-  {
-    "ingredient": "other long-strand pasta"
-  },
-  {
-    "ingredient": "one 3-pound chicken"
-  },
-  {
-    "ingredient": "garnish"
-  },
-  {
-    "ingredient": "lawyer"
-  },
-  {
-    "ingredient": "mix the rice well"
-  },
-  {
-    "ingredient": "let it cool"
-  },
-  {
-    "ingredient": "do the same with raw salmon"
-  },
-  {
-    "ingredient": "cover bamboo with stretch film"
-  },
-  {
-    "ingredient": "if you have not taken enough"
-  },
-  {
-    "ingredient": "with sesame seeds"
-  },
-  {
-    "ingredient": "return the seaweed"
-  },
-  {
-    "ingredient": "along the entire length"
-  },
-  {
-    "ingredient": "cloves of garlic"
-  },
-  {
-    "ingredient": "mixed cherry tomatoes"
-  },
-  {
-    "ingredient": "flax eggs"
-  },
-  {
-    "ingredient": "the hot chicken rub"
-  },
-  {
-    "ingredient": "pickle slices"
-  },
-  {
-    "ingredient": "nutmeg a grating"
-  },
-  {
-    "ingredient": "chilli flakes a pinch"
-  },
-  {
-    "ingredient": "sage leaves a handful"
-  },
-  {
-    "ingredient": "black onion seeds to serve"
-  },
-  {
-    "ingredient": "freshly ground pepper"
-  },
-  {
-    "ingredient": "piece fresh ginger peeled"
-  },
-  {
-    "ingredient": "chopped"
-  },
-  {
-    "ingredient": "clove garlic peeled"
-  },
-  {
-    "ingredient": "drops of tabasco sauce"
-  },
-  {
-    "ingredient": "white rice cooked"
-  },
-  {
-    "ingredient": "avocado peeled"
-  },
-  {
-    "ingredient": "parsley chopped"
-  },
-  {
-    "ingredient": "greek yogurt for dressing"
-  },
-  {
-    "ingredient": "in half if desired"
-  },
-  {
-    "ingredient": "garlic clives"
-  },
-  {
-    "ingredient": "slices of ginger"
-  },
-  {
-    "ingredient": "julienned ginger"
-  },
-  {
-    "ingredient": "fried garlic"
-  },
-  {
-    "ingredient": "rounds fresh ginger"
-  },
-  {
-    "ingredient": "green onions to serve"
-  },
-  {
-    "ingredient": "set aside until ready to serve"
-  },
-  {
-    "ingredient": "middle size cabbage"
-  },
-  {
-    "ingredient": "garlic cloves sliced"
-  },
-  {
-    "ingredient": "root ginger"
-  },
-  {
-    "ingredient": "as needed"
-  },
-  {
-    "ingredient": "red bell peppersstemmed"
-  },
-  {
-    "ingredient": "green bell peppersstemmed"
-  },
-  {
-    "ingredient": "can crushed tomato"
-  },
-  {
-    "ingredient": "large tomatoes"
-  },
-  {
-    "ingredient": "small red chiles"
-  },
-  {
-    "ingredient": "grass-fed butter"
-  },
-  {
-    "ingredient": "super fine almond flour"
-  },
-  {
-    "ingredient": "elderflower cordial"
-  },
-  {
-    "ingredient": "puff pastry sheet"
-  },
-  {
-    "ingredient": "sprigs of cilantro"
-  },
-  {
-    "ingredient": "can tomato paste"
-  },
-  {
-    "ingredient": "kebab sticks"
-  },
-  {
-    "ingredient": "dry fruits of your choice"
-  },
-  {
-    "ingredient": "water to make the dough"
-  },
-  {
-    "ingredient": "olive oil to coat bones"
-  },
-  {
-    "ingredient": "basil chiffonade"
-  },
-  {
-    "ingredient": "freshly-ground black pepper"
-  },
-  {
-    "ingredient": "chipotle puree"
-  },
-  {
-    "ingredient": "golden caster sugar a pinch"
-  },
-  {
-    "ingredient": "shredding all the skin"
-  },
-  {
-    "ingredient": "meat from the bones"
-  },
-  {
-    "ingredient": "finely chopping"
-  },
-  {
-    "ingredient": "pinching to seal"
-  },
-  {
-    "ingredient": "heating oil in the pan"
-  },
-  {
-    "ingredient": "white baps"
-  },
-  {
-    "ingredient": "american cheese per burger"
-  },
-  {
-    "ingredient": "meal buns"
-  },
-  {
-    "ingredient": "olive oil for rubbing"
-  },
-  {
-    "ingredient": "carrot chopped"
-  },
-  {
-    "ingredient": "virgin olive oil salt"
-  },
-  {
-    "ingredient": "small mint leaves"
-  },
-  {
-    "ingredient": "squeeze lemon juice"
-  },
-  {
-    "ingredient": "rosemary sprigs"
-  },
-  {
-    "ingredient": "leaves of swiss chard"
-  },
-  {
-    "ingredient": "cooking chorizo"
-  },
-  {
-    "ingredient": "round dumpling wrappers"
-  },
-  {
-    "ingredient": "french bread"
-  },
-  {
-    "ingredient": "i small handful fresh spinach"
-  },
-  {
-    "ingredient": "celery curls"
-  },
-  {
-    "ingredient": "carrot sticks"
-  },
-  {
-    "ingredient": "tea strainer"
-  },
-  {
-    "ingredient": "or large-size pot"
-  },
-  {
-    "ingredient": "french press coffeemaker"
-  },
-  {
-    "ingredient": "heat-resistant glass dish"
-  },
-  {
-    "ingredient": "a baking tin"
-  },
-  {
-    "ingredient": "dehydrator"
-  },
-  {
-    "ingredient": "aluminum foil"
-  },
-  {
-    "ingredient": "paper towels"
-  },
-  {
-    "ingredient": "glass jar"
-  },
-  {
-    "ingredient": "day one"
-  },
-  {
-    "ingredient": "day two"
-  },
-  {
-    "ingredient": "large shrimp"
-  },
-  {
-    "ingredient": "sugar to sprinkle"
-  },
-  {
-    "ingredient": "srirracha sauce to serve"
-  },
-  {
-    "ingredient": "tbsp"
-  },
-  {
-    "ingredient": "tsp"
-  },
-  {
-    "ingredient": "juice of two large lemons"
-  },
-  {
-    "ingredient": "part brown onions"
-  },
-  {
-    "ingredient": "cup oil"
-  },
-  {
-    "ingredient": "salt as per taste"
-  },
-  {
-    "ingredient": "cinnamon sticks of one inch"
-  },
-  {
-    "ingredient": "pinch of saffron"
-  },
-  {
-    "ingredient": "drops of kewra essence"
-  },
-  {
-    "ingredient": "kneaded dough"
-  },
-  {
-    "ingredient": "take out bouquet garni"
-  },
-  {
-    "ingredient": "place hot tava"
-  },
-  {
-    "ingredient": "other short-grain rice"
-  },
-  {
-    "ingredient": "spinach marinade"
-  },
-  {
-    "ingredient": "place a wok"
-  },
-  {
-    "ingredient": "vegetable oil for frying"
-  },
-  {
-    "ingredient": "the crispy noodles"
-  },
-  {
-    "ingredient": "the sauce"
-  },
-  {
-    "ingredient": "to complete the dish"
-  },
-  {
-    "ingredient": "loose brussels sprout cores"
-  },
-  {
-    "ingredient": "daikon batons"
-  },
-  {
-    "ingredient": "cloves of minced garlic"
-  },
-  {
-    "ingredient": "kimchi with juices"
-  },
-  {
-    "ingredient": "fresno chilestemmed"
-  },
-  {
-    "ingredient": "one 1-inch piece ginger"
-  },
-  {
-    "ingredient": "spicy chili crisp"
-  },
-  {
-    "ingredient": "per person of squash"
-  },
-  {
-    "ingredient": "slices of fresh ginger root"
-  },
-  {
-    "ingredient": "cress to serve"
-  },
-  {
-    "ingredient": "can sweetened condensed milk"
-  },
-  {
-    "ingredient": "extra green tea powder"
-  },
-  {
-    "ingredient": "bayleaves"
-  },
-  {
-    "ingredient": "s of hot fries"
-  },
-  {
-    "ingredient": "water for binding"
-  },
-  {
-    "ingredient": "medium-large white cabbage"
-  },
-  {
-    "ingredient": "heads garlic"
-  },
-  {
-    "ingredient": "tokyo negi"
-  },
-  {
-    "ingredient": "dough for ravioli"
-  },
-  {
-    "ingredient": "red or green amaranth"
-  },
-  {
-    "ingredient": "harive soppu"
-  },
-  {
-    "ingredient": "tabespoon adobo sauce"
-  },
-  {
-    "ingredient": "basic guacamole"
-  },
-  {
-    "ingredient": "then add to a blender"
-  },
-  {
-    "ingredient": "vegetable oil divided"
-  },
-  {
-    "ingredient": "white onion chopped"
-  },
-  {
-    "ingredient": "garlic clove minced"
-  },
-  {
-    "ingredient": "flour tortillas medium size"
-  },
-  {
-    "ingredient": "salsa of your choice"
-  },
-  {
-    "ingredient": "celery ribs"
-  },
-  {
-    "ingredient": "lemongrass stalk"
-  },
-  {
-    "ingredient": "cilantro sprigs"
-  },
-  {
-    "ingredient": "rice spices"
-  },
-  {
-    "ingredient": "ground black pepper to taste"
-  },
-  {
-    "ingredient": "paprika a pinch"
-  },
-  {
-    "ingredient": "basil a bunch"
-  },
-  {
-    "ingredient": "plain flour for dusting"
-  },
-  {
-    "ingredient": "chili powder a pinch"
-  },
-  {
-    "ingredient": "ginger a thumb-sized piece"
-  },
-  {
-    "ingredient": "curry leaves a handful"
-  },
-  {
-    "ingredient": "rice to serve"
-  },
-  {
-    "ingredient": "other short pasta"
-  },
-  {
-    "ingredient": "metal skewers"
-  },
-  {
-    "ingredient": "each of sumac"
-  },
-  {
-    "ingredient": "serve immediately"
-  },
-  {
-    "ingredient": "x sweetcorn cobs"
-  },
-  {
-    "ingredient": "or fresh blueberries"
-  },
-  {
-    "ingredient": "slices pancetta"
-  },
-  {
-    "ingredient": "barbecue sauce for serving"
-  },
-  {
-    "ingredient": "prepared pad thai sauce"
-  },
-  {
-    "ingredient": "parmigiano cheese to grate"
-  },
-  {
-    "ingredient": "virgin olive oil to drizzle"
-  },
-  {
-    "ingredient": "clove of garlic"
-  },
-  {
-    "ingredient": "chopped tomatoes for topping"
-  },
-  {
-    "ingredient": "to medium carrot"
-  },
-  {
-    "ingredient": "ened butter"
-  },
-  {
-    "ingredient": "mix the butter with the spices"
-  },
+    "ingredient": "pepper to taste",
+    "count": 1,
+    "recipes": [
+      "85b74f60-2456-11e7-8ee1-77fc3e032540",
+      "85bef084-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "salt and pepper to taste",
+      "salt and pepper to taste"
+    ]
+  },
+  {
+    "ingredient": "chickenor vegetablestock",
+    "count": 0,
+    "recipes": [
+      "85b74f61-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      " cup chickenor vegetablestock"
+    ]
+  },
+  {
+    "ingredient": "can san marzano tomatoes",
+    "count": 0,
+    "recipes": [
+      "85b77671-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1-28 oz can San Marzano tomatoes, crushed"
+    ]
+  },
+  {
+    "ingredient": "garlic cloves",
+    "count": 30,
+    "recipes": [
+      "85b79d81-2456-11e7-8ee1-77fc3e032540",
+      "85b812b0-2456-11e7-8ee1-77fc3e032540",
+      "85b839c2-2456-11e7-8ee1-77fc3e032540",
+      "85b860d1-2456-11e7-8ee1-77fc3e032540",
+      "85b860d3-2456-11e7-8ee1-77fc3e032540",
+      "85b887e0-2456-11e7-8ee1-77fc3e032540",
+      "85b97241-2456-11e7-8ee1-77fc3e032540",
+      "85b97242-2456-11e7-8ee1-77fc3e032540",
+      "85b9c060-2456-11e7-8ee1-77fc3e032540",
+      "85baf8e1-2456-11e7-8ee1-77fc3e032540",
+      "85baf8e2-2456-11e7-8ee1-77fc3e032540",
+      "85bb6e14-2456-11e7-8ee1-77fc3e032540",
+      "85bb9520-2456-11e7-8ee1-77fc3e032540",
+      "85bc0a52-2456-11e7-8ee1-77fc3e032540",
+      "85bc7f82-2456-11e7-8ee1-77fc3e032540",
+      "85bca691-2456-11e7-8ee1-77fc3e032540",
+      "85bca691-2456-11e7-8ee1-77fc3e032540",
+      "85bcf4b1-2456-11e7-8ee1-77fc3e032540",
+      "85be5442-2456-11e7-8ee1-77fc3e032540",
+      "85be5443-2456-11e7-8ee1-77fc3e032540",
+      "85bef081-2456-11e7-8ee1-77fc3e032540",
+      "85bef082-2456-11e7-8ee1-77fc3e032540",
+      "85c24be1-2456-11e7-8ee1-77fc3e032540",
+      "85c272f2-2456-11e7-8ee1-77fc3e032540",
+      "85c272f3-2456-11e7-8ee1-77fc3e032540",
+      "85c272f3-2456-11e7-8ee1-77fc3e032540",
+      "85c29a00-2456-11e7-8ee1-77fc3e032540",
+      "85c29a00-2456-11e7-8ee1-77fc3e032540",
+      "85c29a05-2456-11e7-8ee1-77fc3e032540",
+      "85c2c111-2456-11e7-8ee1-77fc3e032540",
+      "85c2c114-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "4 garlic cloves, chopped",
+      "2 garlic cloves, thinly sliced",
+      "2 garlic cloves, minced",
+      "2 garlic cloves",
+      "4 garlic cloves, thinly sliced",
+      "8 garlic cloves, thinly sliced",
+      "8 garlic cloves, roughly chopped",
+      "4 garlic cloves, finely chopped",
+      "4 garlic cloves, finely grated",
+      "4 garlic cloves, halved",
+      "15 garlic cloves, coarsely chopped",
+      "2 garlic cloves, finely grated",
+      "3 garlic cloves",
+      "6 garlic cloves",
+      "2 garlic cloves, lightly crushed",
+      "7 garlic cloves, minced",
+      "4 garlic cloves, minced",
+      "3 garlic cloves, grated",
+      "2 garlic cloves",
+      "3 garlic cloves, finely chopped",
+      "3 garlic cloves",
+      "6 garlic cloves, peeled",
+      "2 garlic cloves, minced",
+      "2 garlic cloves, minced",
+      "4 garlic cloves, crushed",
+      "4 garlic cloves, unpeeled",
+      "3 garlic cloves, minced",
+      "2 large garlic cloves",
+      "2 garlic cloves, minced",
+      "2 garlic cloves, finely chopped",
+      "2 garlic cloves, minced or pressed"
+    ]
+  },
   {
-    "ingredient": "wipe off the excess"
+    "ingredient": "turns of freshly ground black pepper",
+    "count": 0,
+    "recipes": [
+      "85b79d81-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "a few turns of freshly ground black pepper"
+    ]
+  },
+  {
+    "ingredient": "oil for deep frying",
+    "count": 1,
+    "recipes": [
+      "85b79d82-2456-11e7-8ee1-77fc3e032540",
+      "85ba0e80-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Oil for deep frying",
+      "oil for deep frying"
+    ]
+  },
+  {
+    "ingredient": "when half cooked",
+    "count": 0,
+    "recipes": [
+      "85b79d83-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "When half cooked, add the asparagus cream and finish cooking"
+    ]
+  },
+  {
+    "ingredient": "pepper each",
+    "count": 0,
+    "recipes": [
+      "85b7c490-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1/4 tsp sea salt and pepper each (to taste)"
+    ]
+  },
+  {
+    "ingredient": "roma tomato sliced",
+    "count": 0,
+    "recipes": [
+      "85b7c490-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 Roma tomato sliced"
+    ]
+  },
+  {
+    "ingredient": "pepper to sprinkle on top",
+    "count": 0,
+    "recipes": [
+      "85b7c490-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Extra Salt/pepper to sprinkle on top"
+    ]
+  },
+  {
+    "ingredient": "bean seasoning",
+    "count": 0,
+    "recipes": [
+      "85b7eba0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1/2 cup (80 g) bean seasoning"
+    ]
+  },
+  {
+    "ingredient": "store-bought",
+    "count": 0,
+    "recipes": [
+      "85b7eba0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 cup (150 g) chopped store-bought or Homemade Smoked Brisket (this is an excellent way to use the tough outer edges of smoked brisket)"
+    ]
+  },
+  {
+    "ingredient": "homemade smoked brisket",
+    "count": 0,
+    "recipes": [
+      "85b7eba0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 cup (150 g) chopped store-bought or Homemade Smoked Brisket (this is an excellent way to use the tough outer edges of smoked brisket)"
+    ]
+  },
+  {
+    "ingredient": "red thai chilestemmed",
+    "count": 0,
+    "recipes": [
+      "85b839c2-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 red Thai chilestemmed, seeded and minced"
+    ]
+  },
+  {
+    "ingredient": "black pepper to taste",
+    "count": 1,
+    "recipes": [
+      "85b860d2-2456-11e7-8ee1-77fc3e032540",
+      "85b860d2-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "freshly ground black pepper to taste",
+      "freshly ground pink peppercorn or black pepper to taste"
+    ]
+  },
+  {
+    "ingredient": "sea salt to taste",
+    "count": 0,
+    "recipes": [
+      "85b860d2-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "sea salt to taste"
+    ]
+  },
+  {
+    "ingredient": "virgin olive oil for drizzling",
+    "count": 0,
+    "recipes": [
+      "85b860d2-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "extra virgin olive oil for drizzling"
+    ]
+  },
+  {
+    "ingredient": "bread flour for shaping the dough",
+    "count": 0,
+    "recipes": [
+      "85b860d2-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "bread flour for shaping the dough"
+    ]
+  },
+  {
+    "ingredient": "bread flour to dust the pizza peel",
+    "count": 0,
+    "recipes": [
+      "85b860d2-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "fine cornmeal or bread flour to dust the pizza peel"
+    ]
+  },
+  {
+    "ingredient": "other long-strand pasta",
+    "count": 0,
+    "recipes": [
+      "85b860d3-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "12 ounces bucatini or other long-strand pasta"
+    ]
+  },
+  {
+    "ingredient": "one 3-pound chicken",
+    "count": 0,
+    "recipes": [
+      "85b887e0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "One 3-pound chicken, quartered"
+    ]
+  },
+  {
+    "ingredient": "garnish",
+    "count": 0,
+    "recipes": [
+      "85b8aef0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "For garnish"
+    ]
+  },
+  {
+    "ingredient": "lawyer",
+    "count": 0,
+    "recipes": [
+      "85b8aef0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Lawyer - 1"
+    ]
+  },
+  {
+    "ingredient": "mixed cherry tomatoes",
+    "count": 0,
+    "recipes": [
+      "85b8d600-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "250 g mixed cherry tomatoes"
+    ]
+  },
+  {
+    "ingredient": "flax eggs",
+    "count": 0,
+    "recipes": [
+      "85b8fd10-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "4 flax eggs"
+    ]
+  },
+  {
+    "ingredient": "the hot chicken rub",
+    "count": 0,
+    "recipes": [
+      "85b8fd10-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 tablespoon of the hot chicken rub (or use this recipe to make your own)"
+    ]
+  },
+  {
+    "ingredient": "pickle slices",
+    "count": 0,
+    "recipes": [
+      "85b8fd10-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "pickle slices"
+    ]
+  },
+  {
+    "ingredient": "nutmeg a grating",
+    "count": 0,
+    "recipes": [
+      "85b8fd11-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "nutmeg a grating"
+    ]
+  },
+  {
+    "ingredient": "chilli flakes a pinch",
+    "count": 1,
+    "recipes": [
+      "85b8fd11-2456-11e7-8ee1-77fc3e032540",
+      "85c29a04-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "chilli flakes a pinch",
+      "chilli flakes a pinch"
+    ]
+  },
+  {
+    "ingredient": "sage leaves a handful",
+    "count": 0,
+    "recipes": [
+      "85b8fd11-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "sage leaves a handful"
+    ]
+  },
+  {
+    "ingredient": "black onion seeds to serve",
+    "count": 0,
+    "recipes": [
+      "85b8fd11-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "black onion seeds to serve"
+    ]
+  },
+  {
+    "ingredient": "chinese five spice",
+    "count": 0,
+    "recipes": [
+      "85b8fd12-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "3 tsp Chinese five spice"
+    ]
+  },
+  {
+    "ingredient": "freshly ground pepper",
+    "count": 1,
+    "recipes": [
+      "85b92420-2456-11e7-8ee1-77fc3e032540",
+      "85be7b52-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "salt and freshly ground pepper",
+      "salt and freshly ground pepper"
+    ]
+  },
+  {
+    "ingredient": "jarred crushed chinese chiles in oil",
+    "count": 0,
+    "recipes": [
+      "85b92421-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1/4 C jarred crushed Chinese chiles in oil"
+    ]
+  },
+  {
+    "ingredient": "piece fresh ginger peeled",
+    "count": 0,
+    "recipes": [
+      "85b92422-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2cm piece fresh ginger peeled and chopped"
+    ]
+  },
+  {
+    "ingredient": "garlic peeled",
+    "count": 0,
+    "recipes": [
+      "85b92422-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 clove garlic peeled and chopped"
+    ]
+  },
+  {
+    "ingredient": "dessert spoons of fat free greek style yogurt",
+    "count": 0,
+    "recipes": [
+      "85b92422-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 dessert spoons of fat free Greek style yogurt"
+    ]
+  },
+  {
+    "ingredient": "drops of tabasco sauce",
+    "count": 0,
+    "recipes": [
+      "85b92422-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Few drops of Tabasco sauce"
+    ]
+  },
+  {
+    "ingredient": "white rice cooked",
+    "count": 0,
+    "recipes": [
+      "85b92422-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "200g white rice cooked"
+    ]
+  },
+  {
+    "ingredient": "avocado peeled",
+    "count": 0,
+    "recipes": [
+      "85b92422-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 avocado peeled and sliced"
+    ]
+  },
+  {
+    "ingredient": "parsley chopped",
+    "count": 0,
+    "recipes": [
+      "85b92422-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Handful Fresh parsley chopped"
+    ]
+  },
+  {
+    "ingredient": "greek yogurt for dressing",
+    "count": 0,
+    "recipes": [
+      "85b92422-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Greek yogurt for dressing"
+    ]
+  },
+  {
+    "ingredient": "green chilli pepper for serving",
+    "count": 0,
+    "recipes": [
+      "85b92422-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Extra green chilli pepper for serving"
+    ]
+  },
+  {
+    "ingredient": "garlic clives",
+    "count": 0,
+    "recipes": [
+      "85b92423-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "6 garlic clives- rough chopped"
+    ]
+  },
+  {
+    "ingredient": "slices of ginger",
+    "count": 0,
+    "recipes": [
+      "85b92424-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 thin slices of ginger"
+    ]
+  },
+  {
+    "ingredient": "julienned ginger",
+    "count": 0,
+    "recipes": [
+      "85b92424-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Julienned ginger"
+    ]
+  },
+  {
+    "ingredient": "fried garlic",
+    "count": 0,
+    "recipes": [
+      "85b92424-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Fried garlic (Skipped this)"
+    ]
+  },
+  {
+    "ingredient": "rounds fresh ginger",
+    "count": 0,
+    "recipes": [
+      "85b94b34-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "4 thin rounds fresh ginger"
+    ]
+  },
+  {
+    "ingredient": "green onions to serve",
+    "count": 0,
+    "recipes": [
+      "85b94b34-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 tablespoon sliced green onions to serve"
+    ]
+  },
+  {
+    "ingredient": "middle size cabbage",
+    "count": 0,
+    "recipes": [
+      "85b97240-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 middle size cabbage, hand shredded and remove the tough parts"
+    ]
+  },
+  {
+    "ingredient": "garlic cloves sliced",
+    "count": 0,
+    "recipes": [
+      "85b97240-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 garlic cloves sliced"
+    ]
+  },
+  {
+    "ingredient": "root ginger",
+    "count": 0,
+    "recipes": [
+      "85b97240-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 inch root ginger, minced"
+    ]
+  },
+  {
+    "ingredient": "as needed",
+    "count": 0,
+    "recipes": [
+      "85b97240-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1/2 teaspoon salt or as needed"
+    ]
+  },
+  {
+    "ingredient": "red bell peppersstemmed",
+    "count": 0,
+    "recipes": [
+      "85b97241-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 red bell peppersstemmed, seeded and diced"
+    ]
+  },
+  {
+    "ingredient": "green bell peppersstemmed",
+    "count": 0,
+    "recipes": [
+      "85b97241-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 green bell peppersstemmed, seeded and diced"
+    ]
+  },
+  {
+    "ingredient": "can crushed tomato",
+    "count": 0,
+    "recipes": [
+      "85b97243-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "800 ml can crushed tomato"
+    ]
+  },
+  {
+    "ingredient": "large tomatoes",
+    "count": 0,
+    "recipes": [
+      "85b97243-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 fresh large tomatoes (diced)"
+    ]
+  },
+  {
+    "ingredient": "small red chiles",
+    "count": 0,
+    "recipes": [
+      "85b99951-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Thinly sliced scallions and small red chiles, for garnish"
+    ]
+  },
+  {
+    "ingredient": "grass-fed butter",
+    "count": 0,
+    "recipes": [
+      "85b9c061-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "3 Tablespoons grass-fed butter, divided"
+    ]
+  },
+  {
+    "ingredient": "super fine almond flour",
+    "count": 0,
+    "recipes": [
+      "85b9c061-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 Tablespoons super fine almond flour"
+    ]
+  },
+  {
+    "ingredient": "elderflower cordial",
+    "count": 0,
+    "recipes": [
+      "85b9c063-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Splash of Elderflower Cordial"
+    ]
+  },
+  {
+    "ingredient": "puff pastry sheet",
+    "count": 0,
+    "recipes": [
+      "85b9c064-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 puff pastry sheet, thawed"
+    ]
+  },
+  {
+    "ingredient": "sprigs of cilantro",
+    "count": 0,
+    "recipes": [
+      "85b9e770-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "A few sprigs of cilantro or scallions"
+    ]
+  },
+  {
+    "ingredient": "can tomato paste",
+    "count": 0,
+    "recipes": [
+      "85ba3590-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "5.5 ounce can tomato paste"
+    ]
+  },
+  {
+    "ingredient": "kebab sticks",
+    "count": 0,
+    "recipes": [
+      "85ba5ca0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "kebab sticks"
+    ]
+  },
+  {
+    "ingredient": "dry fruits of your choice",
+    "count": 0,
+    "recipes": [
+      "85ba83b0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      " cup assorted nuts and dry fruits of your choice, finely chopped"
+    ]
+  },
+  {
+    "ingredient": "water to make the dough",
+    "count": 0,
+    "recipes": [
+      "85ba83b0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "water to make the dough"
+    ]
+  },
+  {
+    "ingredient": "olive oil to coat bones",
+    "count": 0,
+    "recipes": [
+      "85baaac0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Olive oil to coat bones"
+    ]
+  },
+  {
+    "ingredient": "basil chiffonade",
+    "count": 0,
+    "recipes": [
+      "85bad1d0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1/2 quart basil chiffonade"
+    ]
+  },
+  {
+    "ingredient": "freshly-ground black pepper",
+    "count": 0,
+    "recipes": [
+      "85bad1d0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Salt and freshly-ground black pepper, to taste"
+    ]
+  },
+  {
+    "ingredient": "chipotle puree",
+    "count": 0,
+    "recipes": [
+      "85bad1d0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "3 tablespoons chipotle puree"
+    ]
+  },
+  {
+    "ingredient": "golden caster sugar a pinch",
+    "count": 0,
+    "recipes": [
+      "85bad1d2-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "golden caster sugar a pinch"
+    ]
+  },
+  {
+    "ingredient": "white baps",
+    "count": 0,
+    "recipes": [
+      "85baf8e0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "4 white baps"
+    ]
+  },
+  {
+    "ingredient": "american cheese per burger",
+    "count": 0,
+    "recipes": [
+      "85baf8e0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "12 slices American cheese per burger (3 per burger)"
+    ]
+  },
+  {
+    "ingredient": "hellmanns spicy churrasco sauce",
+    "count": 0,
+    "recipes": [
+      "85baf8e0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Hellmanns Spicy Churrasco Sauce"
+    ]
+  },
+  {
+    "ingredient": "skinless fillets blue-eye trevalla",
+    "count": 0,
+    "recipes": [
+      "85baf8e3-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "4 skinless fillets blue-eye trevalla (about 130 gm each)"
+    ]
+  },
+  {
+    "ingredient": "meal buns",
+    "count": 0,
+    "recipes": [
+      "85baf8e3-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "4 soft wholemeal buns, halved"
+    ]
+  },
+  {
+    "ingredient": "new england-style split-top hot dog buns",
+    "count": 0,
+    "recipes": [
+      "85bb1ff0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "8 New England-style split-top hot dog buns"
+    ]
+  },
+  {
+    "ingredient": "olive oil for rubbing",
+    "count": 0,
+    "recipes": [
+      "85bb6e10-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Olive Oil for rubbing"
+    ]
+  },
+  {
+    "ingredient": "carrot chopped",
+    "count": 0,
+    "recipes": [
+      "85bb6e11-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1/2 carrot chopped"
+    ]
+  },
+  {
+    "ingredient": "virgin olive oil salt",
+    "count": 0,
+    "recipes": [
+      "85bb6e11-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "15 ml virgin olive oil Salt"
+    ]
+  },
+  {
+    "ingredient": "virgin olive oil for sprinkling",
+    "count": 0,
+    "recipes": [
+      "85bb6e12-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "virgin olive oil for sprinkling"
+    ]
+  },
+  {
+    "ingredient": "small mint leaves",
+    "count": 0,
+    "recipes": [
+      "85bb6e15-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "6 tbsp. packed small mint leaves, torn by hand"
+    ]
+  },
+  {
+    "ingredient": "squeeze lemon juice",
+    "count": 0,
+    "recipes": [
+      "85bb9520-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "squeeze lemon juice- 1 teaspoon"
+    ]
+  },
+  {
+    "ingredient": "rosemary sprigs",
+    "count": 0,
+    "recipes": [
+      "85bb9520-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "fresh rosemary sprigs"
+    ]
+  },
+  {
+    "ingredient": "leaves of swiss chard",
+    "count": 0,
+    "recipes": [
+      "85bb9521-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Few leaves of Swiss Chard or Spinach"
+    ]
+  },
+  {
+    "ingredient": "cooking chorizo",
+    "count": 0,
+    "recipes": [
+      "85bb9522-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "50 g Cooking chorizo"
+    ]
+  },
+  {
+    "ingredient": "round dumpling wrappers",
+    "count": 0,
+    "recipes": [
+      "85bb9523-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "50 round dumpling wrappers"
+    ]
+  },
+  {
+    "ingredient": "french bread",
+    "count": 0,
+    "recipes": [
+      "85bb9524-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      " loaf french bread (6 inches)"
+    ]
+  },
+  {
+    "ingredient": "i small handful fresh spinach",
+    "count": 0,
+    "recipes": [
+      "85bb9524-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "I small handful fresh spinach"
+    ]
+  },
+  {
+    "ingredient": "the rice",
+    "count": 0,
+    "recipes": [
+      "85bbbc30-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "For the rice"
+    ]
+  },
+  {
+    "ingredient": "sambal oelek chili garlic sauce",
+    "count": 0,
+    "recipes": [
+      "85bbbc31-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 tbsps Sambal Oelek chili garlic sauce"
+    ]
+  },
+  {
+    "ingredient": "celery curls",
+    "count": 0,
+    "recipes": [
+      "85bbbc31-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Celery curls"
+    ]
+  },
+  {
+    "ingredient": "carrot sticks",
+    "count": 0,
+    "recipes": [
+      "85bbbc31-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Carrot sticks"
+    ]
+  },
+  {
+    "ingredient": "tea strainer",
+    "count": 0,
+    "recipes": [
+      "85bbbc31-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "A tea strainer"
+    ]
+  },
+  {
+    "ingredient": "or large-size pot",
+    "count": 0,
+    "recipes": [
+      "85bbbc31-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 medium or large-size pot"
+    ]
+  },
+  {
+    "ingredient": "french press coffeemaker",
+    "count": 0,
+    "recipes": [
+      "85bbbc31-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "A French press coffeemaker"
+    ]
+  },
+  {
+    "ingredient": "heat-resistant glass dish",
+    "count": 0,
+    "recipes": [
+      "85bbbc31-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "A heat-resistant glass dish or a baking tin"
+    ]
+  },
+  {
+    "ingredient": "dehydrator",
+    "count": 0,
+    "recipes": [
+      "85bbbc31-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "A dehydrator (optional)"
+    ]
+  },
+  {
+    "ingredient": "aluminum foil",
+    "count": 0,
+    "recipes": [
+      "85bbbc31-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Aluminum foil"
+    ]
+  },
+  {
+    "ingredient": "paper towels",
+    "count": 0,
+    "recipes": [
+      "85bbbc31-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Paper towels"
+    ]
+  },
+  {
+    "ingredient": "glass jar",
+    "count": 0,
+    "recipes": [
+      "85bbbc31-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "A glass jar"
+    ]
+  },
+  {
+    "ingredient": "large shrimp",
+    "count": 1,
+    "recipes": [
+      "85bbbc32-2456-11e7-8ee1-77fc3e032540",
+      "85c29a03-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1/4 pound large shrimp, shelled and deveined",
+      "1 lb of large shrimp (peeled and deveined)"
+    ]
+  },
+  {
+    "ingredient": "sugar to sprinkle",
+    "count": 0,
+    "recipes": [
+      "85bbbc33-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Raw sugar to sprinkle"
+    ]
+  },
+  {
+    "ingredient": "srirracha sauce to serve",
+    "count": 0,
+    "recipes": [
+      "85bbbc34-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "srirracha sauce to serve"
+    ]
+  },
+  {
+    "ingredient": "juice of two large lemons",
+    "count": 0,
+    "recipes": [
+      "85bbbc35-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Juice of two large lemons"
+    ]
+  },
+  {
+    "ingredient": "part brown onions",
+    "count": 0,
+    "recipes": [
+      "85bbbc35-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 part brown onions, crushed"
+    ]
+  },
+  {
+    "ingredient": "cup oil",
+    "count": 0,
+    "recipes": [
+      "85bbbc35-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1/2(120ml) cup oil (reserved from fried onions)"
+    ]
+  },
+  {
+    "ingredient": "salt as per taste",
+    "count": 0,
+    "recipes": [
+      "85bbbc35-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "salt as per taste"
+    ]
+  },
+  {
+    "ingredient": "cinnamon sticks of one inch",
+    "count": 0,
+    "recipes": [
+      "85bbbc35-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 cinnamon sticks of one inch"
+    ]
+  },
+  {
+    "ingredient": "pinch of saffron",
+    "count": 0,
+    "recipes": [
+      "85bbbc35-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 good pinch of saffron"
+    ]
+  },
+  {
+    "ingredient": "drops of kewra essence",
+    "count": 0,
+    "recipes": [
+      "85bbbc35-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Few drops of Kewra essence"
+    ]
+  },
+  {
+    "ingredient": "kneaded dough",
+    "count": 0,
+    "recipes": [
+      "85bbbc35-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "A cup of kneaded dough"
+    ]
+  },
+  {
+    "ingredient": "other short-grain rice",
+    "count": 0,
+    "recipes": [
+      "85bbe343-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1/2 cup Kokohu Rose or other short-grain rice"
+    ]
+  },
+  {
+    "ingredient": "spinach marinade",
+    "count": 0,
+    "recipes": [
+      "85bbe344-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Spinach marinade"
+    ]
+  },
+  {
+    "ingredient": "other indian spice mix of your choice",
+    "count": 0,
+    "recipes": [
+      "85bc0a51-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 teaspoons garam masala or other Indian spice mix of your choice"
+    ]
+  },
+  {
+    "ingredient": "vegetable oil for frying",
+    "count": 1,
+    "recipes": [
+      "85bc0a51-2456-11e7-8ee1-77fc3e032540",
+      "85bc3161-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Vegetable oil for frying",
+      "Vegetable oil for frying"
+    ]
+  },
+  {
+    "ingredient": "the noodles you will be using for the main dish",
+    "count": 0,
+    "recipes": [
+      "85bc0a51-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 big handful of the noodles you will be using for the main dish"
+    ]
+  },
+  {
+    "ingredient": "the crispy noodles",
+    "count": 0,
+    "recipes": [
+      "85bc0a51-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "For the crispy noodles"
+    ]
+  },
+  {
+    "ingredient": "loose brussels sprout cores",
+    "count": 0,
+    "recipes": [
+      "85bc0a52-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 cups of loose Brussels sprout cores and leaves"
+    ]
+  },
+  {
+    "ingredient": "daikon batons",
+    "count": 0,
+    "recipes": [
+      "85bc0a52-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1/2 cup of green radish or daikon batons"
+    ]
+  },
+  {
+    "ingredient": "kimchi with juices",
+    "count": 0,
+    "recipes": [
+      "85bc0a53-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 cup diced kimchi with juices"
+    ]
+  },
+  {
+    "ingredient": "seaweed",
+    "count": 0,
+    "recipes": [
+      "85bc0a53-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Dried seaweed, for garnish (optional)"
+    ]
+  },
+  {
+    "ingredient": "1-pound piece boneless salmon fillet",
+    "count": 0,
+    "recipes": [
+      "85bc3162-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 1-pound piece boneless salmon fillet"
+    ]
+  },
+  {
+    "ingredient": "fresno chilestemmed",
+    "count": 0,
+    "recipes": [
+      "85bca691-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 Fresno chilestemmed, seeded and minced"
+    ]
+  },
+  {
+    "ingredient": "one 1-inch piece ginger",
+    "count": 0,
+    "recipes": [
+      "85bca691-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "One 1-inch piece ginger, peeled and minced"
+    ]
+  },
+  {
+    "ingredient": "spicy chili crisp",
+    "count": 0,
+    "recipes": [
+      "85bca691-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      " cup Spicy Chili Crisp (Lao Gan Ma)"
+    ]
+  },
+  {
+    "ingredient": "per person of squash",
+    "count": 0,
+    "recipes": [
+      "85bd1bc0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "75 g per person of squash/pumpkin (onion squash or violini squash are best)"
+    ]
+  },
+  {
+    "ingredient": "per person of white fish fillets",
+    "count": 0,
+    "recipes": [
+      "85bd1bc0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "160 g per person of white fish fillets (cod works well)"
+    ]
+  },
+  {
+    "ingredient": "slices of fresh ginger root",
+    "count": 0,
+    "recipes": [
+      "85bd1bc2-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "3-4 thin slices of fresh ginger root"
+    ]
+  },
+  {
+    "ingredient": "cress to serve",
+    "count": 0,
+    "recipes": [
+      "85bd69e0-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 handful cress to serve"
+    ]
+  },
+  {
+    "ingredient": "can sweetened condensed milk",
+    "count": 0,
+    "recipes": [
+      "85be2d30-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1-14 oz. can sweetened condensed milk"
+    ]
+  },
+  {
+    "ingredient": "extra green tea powder",
+    "count": 0,
+    "recipes": [
+      "85be2d30-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 1/2 Tbsp of extra green tea powder (5 packets), for the sauce"
+    ]
+  },
+  {
+    "ingredient": "bayleaves",
+    "count": 0,
+    "recipes": [
+      "85be5440-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "3 bayleaves"
+    ]
+  },
+  {
+    "ingredient": "completely cleaned sea scallops",
+    "count": 0,
+    "recipes": [
+      "85be5442-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 pound completely cleaned sea scallops"
+    ]
+  },
+  {
+    "ingredient": "s of hot fries",
+    "count": 0,
+    "recipes": [
+      "85be7b52-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 servings of hot fries"
+    ]
+  },
+  {
+    "ingredient": "water for binding",
+    "count": 0,
+    "recipes": [
+      "85bea261-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Cold water for binding"
+    ]
+  },
+  {
+    "ingredient": "medium-large white cabbage",
+    "count": 0,
+    "recipes": [
+      "85bea262-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Head of a medium-large white cabbage, sliced"
+    ]
+  },
+  {
+    "ingredient": "heads garlic",
+    "count": 0,
+    "recipes": [
+      "85bec971-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 whole heads garlic"
+    ]
+  },
+  {
+    "ingredient": "tokyo negi",
+    "count": 0,
+    "recipes": [
+      "85bec971-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 cup very thinly sliced scallions or Tokyo negi (see note above)"
+    ]
+  },
+  {
+    "ingredient": "dough for ravioli",
+    "count": 0,
+    "recipes": [
+      "85bec972-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "dough for ravioli"
+    ]
+  },
+  {
+    "ingredient": "your favourite liquid sweetener",
+    "count": 0,
+    "recipes": [
+      "85bec973-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1/2 cup (125ml) pure maple syrup or your favourite liquid sweetener"
+    ]
+  },
+  {
+    "ingredient": "red or green amaranth",
+    "count": 0,
+    "recipes": [
+      "85bef080-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 large bunch of Red or Green Amaranth/Harive Soppu"
+    ]
+  },
+  {
+    "ingredient": "harive soppu",
+    "count": 0,
+    "recipes": [
+      "85bef080-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 large bunch of Red or Green Amaranth/Harive Soppu"
+    ]
+  },
+  {
+    "ingredient": "hing",
+    "count": 0,
+    "recipes": [
+      "85bef080-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      " tsp Hing/Asafoetida (Optional)"
+    ]
+  },
+  {
+    "ingredient": "tabespoon adobo sauce",
+    "count": 0,
+    "recipes": [
+      "85bef081-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 Tabespoon adobo sauce"
+    ]
+  },
+  {
+    "ingredient": "basic guacamole",
+    "count": 0,
+    "recipes": [
+      "85bef081-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Basic Guacamole (optional)"
+    ]
+  },
+  {
+    "ingredient": "vegetable oil divided",
+    "count": 0,
+    "recipes": [
+      "85bef083-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "4 tbsp vegetable oil divided"
+    ]
+  },
+  {
+    "ingredient": "white onion chopped",
+    "count": 0,
+    "recipes": [
+      "85bef083-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1/4 cup white onion chopped"
+    ]
+  },
+  {
+    "ingredient": "serrano chile seeded and chopped",
+    "count": 0,
+    "recipes": [
+      "85bef083-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 jalapeno or serrano chile seeded and chopped (more or less to taste)"
+    ]
+  },
+  {
+    "ingredient": "garlic clove minced",
+    "count": 0,
+    "recipes": [
+      "85bef083-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 garlic clove minced"
+    ]
+  },
+  {
+    "ingredient": "flour tortillas medium size",
+    "count": 0,
+    "recipes": [
+      "85bef083-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "12 Flour tortillas medium size"
+    ]
+  },
+  {
+    "ingredient": "salsa of your choice",
+    "count": 0,
+    "recipes": [
+      "85bef083-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "salsa of your choice"
+    ]
+  },
+  {
+    "ingredient": "celery ribs",
+    "count": 0,
+    "recipes": [
+      "85c24be2-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "4 celery ribs, diced"
+    ]
+  },
+  {
+    "ingredient": "chipotle peppers in adobe sauce",
+    "count": 0,
+    "recipes": [
+      "85c272f2-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2-3 chipotle peppers in adobe sauce (depending on your heat preference), chopped"
+    ]
+  },
+  {
+    "ingredient": "lemongrass stalk",
+    "count": 0,
+    "recipes": [
+      "85c272f3-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 lemongrass stalk, top third removed"
+    ]
+  },
+  {
+    "ingredient": "cilantro sprigs",
+    "count": 0,
+    "recipes": [
+      "85c272f3-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Cilantro sprigs (for serving)"
+    ]
+  },
+  {
+    "ingredient": "rice spices",
+    "count": 0,
+    "recipes": [
+      "85c29a00-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 tsp rice spices"
+    ]
+  },
+  {
+    "ingredient": "generous handful of dried red chiles",
+    "count": 0,
+    "recipes": [
+      "85c29a03-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "A generous handful of dried red chiles (at least 10) or sub with 1 to 2 Tbsp of sambal oelek"
+    ]
+  },
+  {
+    "ingredient": "paprika a pinch",
+    "count": 0,
+    "recipes": [
+      "85c29a04-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "paprika a pinch"
+    ]
+  },
+  {
+    "ingredient": "basil a bunch",
+    "count": 0,
+    "recipes": [
+      "85c29a04-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "basil a bunch, leaves chopped"
+    ]
+  },
+  {
+    "ingredient": "plain flour for dusting",
+    "count": 0,
+    "recipes": [
+      "85c29a04-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "plain flour for dusting"
+    ]
+  },
+  {
+    "ingredient": "spicy chili bean paste with chili",
+    "count": 0,
+    "recipes": [
+      "85c29a05-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 tbsp. spicy chili bean paste with chili (la doubanjiang)"
+    ]
+  },
+  {
+    "ingredient": "chili powder a pinch",
+    "count": 0,
+    "recipes": [
+      "85c2c110-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "hot chili powder a pinch"
+    ]
+  },
+  {
+    "ingredient": "ginger a thumb-sized piece",
+    "count": 0,
+    "recipes": [
+      "85c2c110-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "ginger a thumb-sized piece, chopped"
+    ]
+  },
+  {
+    "ingredient": "curry leaves a handful",
+    "count": 0,
+    "recipes": [
+      "85c2c110-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "curry leaves a handful"
+    ]
+  },
+  {
+    "ingredient": "rice to serve",
+    "count": 0,
+    "recipes": [
+      "85c2c110-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "steamed rice to serve"
+    ]
+  },
+  {
+    "ingredient": "other short pasta",
+    "count": 0,
+    "recipes": [
+      "85c2c111-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "12 ounces strozzapreti or other short pasta"
+    ]
+  },
+  {
+    "ingredient": "quarter slices fresh unpeeled ginger",
+    "count": 0,
+    "recipes": [
+      "85c2e821-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "5 quarter slices fresh unpeeled ginger (smash with the side of a knife or an heavy object)"
+    ]
+  },
+  {
+    "ingredient": "x sweetcorn cobs",
+    "count": 0,
+    "recipes": [
+      "85c2e822-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "2 x sweetcorn cobs, halved"
+    ]
+  },
+  {
+    "ingredient": "or fresh blueberries",
+    "count": 0,
+    "recipes": [
+      "85c2e823-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 cup frozen or fresh blueberries"
+    ]
+  },
+  {
+    "ingredient": "slices pancetta",
+    "count": 0,
+    "recipes": [
+      "85c2e823-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "4 thin slices pancetta"
+    ]
+  },
+  {
+    "ingredient": "barbecue sauce for serving",
+    "count": 0,
+    "recipes": [
+      "85c30f30-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Barbecue sauce for serving"
+    ]
+  },
+  {
+    "ingredient": "prepared pad thai sauce",
+    "count": 0,
+    "recipes": [
+      "85c30f31-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "3 tablespoons prepared Pad Thai sauce"
+    ]
+  },
+  {
+    "ingredient": "grey salt and freshly ground black pepper to season along the way",
+    "count": 0,
+    "recipes": [
+      "85c33640-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Coarse sea salt/grey salt and freshly ground black pepper to season along the way"
+    ]
+  },
+  {
+    "ingredient": "little nub of unsalted butter for each serving",
+    "count": 0,
+    "recipes": [
+      "85c33640-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Little nub of unsalted butter for each serving"
+    ]
+  },
+  {
+    "ingredient": "parmigiano cheese to grate",
+    "count": 0,
+    "recipes": [
+      "85c33640-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Aged Parmigiano cheese to grate"
+    ]
+  },
+  {
+    "ingredient": "virgin olive oil to drizzle",
+    "count": 0,
+    "recipes": [
+      "85c33640-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Extra virgin olive oil to drizzle"
+    ]
+  },
+  {
+    "ingredient": "chopped tomatoes for topping",
+    "count": 0,
+    "recipes": [
+      "85c33641-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Finely sliced iceberg lettuce and chopped tomatoes for topping"
+    ]
+  },
+  {
+    "ingredient": "half a teaspoon of chilli flakes",
+    "count": 0,
+    "recipes": [
+      "85c33643-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "Half a teaspoon of chilli flakes (optional)"
+    ]
+  },
+  {
+    "ingredient": "to medium carrot",
+    "count": 0,
+    "recipes": [
+      "85c35d51-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "1 small to medium carrot, finely chopped"
+    ]
+  },
+  {
+    "ingredient": "cloves garlic",
+    "count": 1,
+    "recipes": [
+      "85c35d52-2456-11e7-8ee1-77fc3e032540",
+      "85c35d52-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "6 fat cloves garlic, crushed",
+      "2-3 fat cloves garlic, crushed"
+    ]
+  },
+  {
+    "ingredient": "ened butter",
+    "count": 0,
+    "recipes": [
+      "85c35d52-2456-11e7-8ee1-77fc3e032540"
+    ],
+    "ref": [
+      "100 g softened butter"
+    ]
   }
 ]

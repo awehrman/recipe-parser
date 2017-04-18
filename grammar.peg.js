@@ -12,7 +12,7 @@ ingredientLine
     ignore?
     ingredientDesc:multipleIngredientDesc
     ignore?
-    ingredient:(ingredient)
+    ingredient:trimmedIngredient
     ignore?
     comment:(comment)? [\n]? {
       return {
@@ -21,8 +21,8 @@ ingredientLine
         unit: unit,
         container: container,
         ingredientDesc: ingredientDesc,
-        ingredient: ingredient,
-        comment: comment
+        ingredient: ingredient.ingredient,
+        comment: comment || ingredient.reserved
       };
   }
 
@@ -293,6 +293,7 @@ imprecise_unit
 / 'sticks'i
 / 'recipe'i
 / 'loaves'i
+/ 'cloves'i
 / 'sheet'i
 / 'piece'i
 / 'extra'i
@@ -317,6 +318,7 @@ imprecise_unit
 / 'turns'i
 / 'loave'i
 / 'packs'i
+/ 'clove'i
 / 'loaf'i
 / 'glug'i
 / 'inch'i
@@ -458,7 +460,6 @@ ingredient
       });
     }
 
-
 alphanumericPhrase
   = $(mixedWord (space mixedWord)*)
 
@@ -466,7 +467,6 @@ mixedWord
   = letter+
   / integer+
   / '('+ phrase + ')'
-
 
 //this is kind of janky and could be rethought out
 // we've got some weird nesting of arrays o
@@ -479,5 +479,43 @@ comment
      (phrase2) ? phrases.push(phrase2) : null;
      return phrases;
   }
+  
+trimmedIngredient
+ = ingredient:reservedPhraseConjunctionAND reserved:reservedComment { return { ingredient: ingredient, reserved: reserved }}
+ / ingredient:reservedPhraseConjunctionOR reserved:reservedComment { return { ingredient: ingredient, reserved: reserved }}
+ / ingredient:reservedPhraseConjunctionSLASH reserved:reservedComment { return { ingredient: ingredient, reserved: reserved }}
+ / ingredient:reservedPhrase reserved:reservedComment { return { ingredient: ingredient, reserved: reserved }}
 
+reservedPhraseConjunctionAND
+ = phrase:$(!reservedComment $(word) (ws* 'and' ws* $(!reservedComment $(word)))*) space*
+    {
+      let phr = phrase.split('and');
+      if (phr.length !== 1) {
+        return { names: [phr[0].trim(), phr[1].trim()], conjunction: 'and'}
+      }
+    }
 
+reservedPhraseConjunctionOR
+ = phrase:$(!reservedComment $(word) (ws* 'or' ws* $(!reservedComment $(word)))*) space*
+    {
+      let phr = phrase.split('or');
+      if (phr.length !== 1) {
+        return { names: [phr[0].trim(), phr[1].trim()], conjunction: 'or'}
+      }
+    }
+    
+reservedPhraseConjunctionSLASH
+ = phrase:$(!reservedComment $(word) (ws* '/' ws* $(!reservedComment $(word)))*) space*
+    {
+      let phr = phrase.split('/');
+      if (phr.length !== 1) {
+        return { names: [phr[0].trim(), phr[1].trim()], conjunction: 'or'}
+      }
+    }
+   
+
+reservedPhrase
+  = phrase:$(!reservedComment $(word) (space $(!reservedComment $(word)))*) space* { return phrase }
+
+reservedComment = 
+ 'to taste'i
