@@ -7,6 +7,12 @@ body {
 	  max-width: 1200px;
 	  padding: 0 1rem;
 
+	  .grid {
+	    display: flex;
+	    flex-wrap: wrap;
+	    flex-direction: row;
+	  }
+
 	  .responsive-image {
 		  max-width: 100%;
 		}
@@ -37,20 +43,15 @@ body {
   	.recipe {
 	    background: lightsalmon;
 	    width: 100%;
+
+	    .unvalidated {
+	    	background: red;
+	    }
 		}
 	}
 }
 
 @media screen and (min-width: 600px) {
- .grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-
-    .recipe {
-    }
-  }
-
   .cell {
     width: calc(50% - 2rem);
   }

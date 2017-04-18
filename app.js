@@ -107,8 +107,64 @@ const parseRecipe = (file, id) => {
     level = $('div').find('div');
   }
 
+  let recipeArray = [];
+  let childArray = [];
+
+  const body = $('body').children();
+
+  // loop through our DOM elements and create a 2D array that hold groups of lines separated by <br/> tags
+  // each array inside this array should contain a group of ingredients or a single instruction line
+  // ex: [ [ing, ing, ing], [ing, ing, ing], [instr], [instr], [instr], [instr]]
+  body.map((i, el) => {
+  	el.children.map((child) => {
+  		if (child.name === 'br') {
+  			childArray = [];
+  			recipeArray.push(childArray);
+  		} else if (child.data !== undefined && child.data.trim().length > 0) {
+  			childArray.push(child.data);
+  		}
+  	});
+  });
+
+  //console.log(recipeArray);
+
+  //now lets loop through our recipeArray and any inner array with a length > 1 we'll try to parse out into an ingredientObject
+  for (let index in recipeArray) {
+  	let block = recipeArray[index];
+
+  	//parse as ingredient
+  	if (block.length > 1) {
+  		let blockIngredients = block.map(line => {
+  			line = sanitizeEncoding(line);
+
+    		let ingredientObject;
+
+    		try {
+    			ingredientObject = parser.parse(line.toLowerCase());
+    			ingredientObject.ref = line;
+    			ingredientObject.parsed = true;
+    		} catch (ex) {
+    			ingredientObject = {
+    				ref: line,
+    				parsed: false
+    			}
+    		}
+
+  			return ingredientObject;
+  		});
+  		ingredients.push(blockIngredients);
+  	} else {
+  		instructions.push(block[0]);
+  	}
+  }
+
+  //flatten our ingredients array
+  ingredients = [].concat.apply([], ingredients);
+
+  console.log(ingredients);
+
   // go through the recipe contents
-  level.each(function(i, elem) {
+  /*level.each(function(i, elem) {
     let line = $(this).text();
 
     //strip out weird characters and fix our silent alt-space
@@ -172,7 +228,7 @@ const parseRecipe = (file, id) => {
     		instructions.push(line);
     	}
     }
-	});
+	});*/
 
 	// lookup the source-url from the meta tags
 	const meta = $('meta')
@@ -269,14 +325,14 @@ files.forEach((file, index, collection) => {
 
 			  recipesCollection.push(recipe);
 			})
-			.then(data => {
+			/*.then(data => {
 				//copy original to archive
 				//console.log('archiving file');
 
 				//remove file
 				console.log('removing file ' + filePath);
 				fs.unlinkSync(filePath);
-			})
+			})*/
 			.then(() => {
 				// generate the master file if we're at the end of our import
 				importedCount++;

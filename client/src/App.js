@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import recipes from '../../data/output/_master.json';
+import Scroll from 'react-scroll';
+
+const scroll = Scroll.animateScroll;
 
 class App extends Component {
   constructor() {
@@ -12,7 +15,7 @@ class App extends Component {
       show: false,
       width: '0',
       height: '0',
-      modOperand: 3
+      numActiveColumns: 3
     };
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -23,37 +26,44 @@ class App extends Component {
     window.addEventListener('resize', this.updateWindowDimensions.bind(this));
   }
 
+  offset(el) {
+    const rect = el.getBoundingClientRect();
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop };
+  }
+
+  componentDidUpdate() {
+    const rp = document.querySelector('.recipe');
+
+    if (rp !== null) {
+      const divOffset = this.offset(rp);
+      scroll.scrollTo(divOffset.top);
+    }
+  }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateWindowDimensions.bind(this));
   }
 
   updateWindowDimensions() {
-    let operator = 1;
+    let operator = 1; //mobile size 1 img per row
 
-    switch(window.innerWidth) {
-      case (window.innerWidth >= 1000):
-        operator = 3;
-        break;
-      case (window.innerWidth <= 600 && window.innerWidth > 400):
-        operator = 2;
-        break;
-      case (window.innerWidth <= 400):
-        operator = 1;
-        break;
-      default:
-        operator = 1;
-        break;
+    if (window.innerWidth >= 1000) { //desktop 3 images per row
+      operator = 3;
+    }
+
+    if (window.innerWidth < 1000 && window.innerWidth >= 600) { //tablet 2 images per row
+      operator = 2;
     }
 
     this.setState({
       width: window.innerWidth,
       height: window.innerHeight,
-      modOperand: operator
+      numActiveColumns: operator
     });
   }
 
   viewRecipe(recipe, index) {
-    console.log('viewing recipe ');
     this.setState({
       currentID: recipe,
       currentOrder: index * 10,
@@ -62,18 +72,34 @@ class App extends Component {
   }
 
   recipe(rp) {
-    const recipe = recipes.filter( r => r.id === rp.id);
     let order = 0;
 
-    switch(this.state.currentOrder % this.state.modOperand) {
-      case 2:
-        order = ((this.state.currentOrder % this.state.modOperand) * 10) + 5;
+    switch(this.state.numActiveColumns) {
+      case 3:
+        switch ((this.state.currentOrder / 10) % 3) {
+          case 0:
+            order = this.state.currentOrder + 25;
+            break;
+          case 1:
+            order = this.state.currentOrder + 15;
+            break;
+          default:
+            order = this.state.currentOrder + 5;
+            break;
+        }
         break;
-      case 1:
-        order = (this.state.currentOrder + 15);
+      case 2:
+        switch ((this.state.currentOrder / 10) % 2) {
+          case 1:
+            order = this.state.currentOrder + 5;
+            break;
+          default:
+            order = this.state.currentOrder + 15;
+            break;
+        }
         break;
       default:
-      order = (this.state.currentOrder + 25);
+        order = (this.state.currentOrder + 5);
         break;
     }
 
@@ -81,13 +107,30 @@ class App extends Component {
       order: order
     };
 
+    const recipe = recipes.filter(r => rp === r.id );
+    const ingredients = recipe[0].ingredients.map((ing) => {
+      return (
+        <li>
+          <span className="amount">{ ing.amount } </span>
+          <span className="unitDesc">{ ing.unitDesc } </span>
+          <span className="unit">{ ing.unit } </span>
+          <span className="ingredientDesc">{ ing.ingredientDesc } </span>
+          { ing.ingredient.map( i => <span className={ (i.validated) ? 'ingredient' : 'unvalidated ingredient' }> { i.name } </span> ) }
+          <span className="comment">{ ing.comment } </span>
+        </li>
+      );
+    });
+    const instructions = recipe[0].instructions.map((instr) => {
+      return <li>{ instr }</li>;
+    });
+
+
     return (
       <div className="recipe" style={ orderStyling }>
-        RECIPE PLACEHOLDER
-        <h1>{ recipe.title }</h1>
-        <ul>{ recipe.ingredients }</ul>
-        <ol>{ recipe.instructions }</ol>
-        <div><a href="#" alt="recipe source">{ recipe.source }</a></div>
+        <h1>{ recipe[0].title }</h1>
+        <ul>{ ingredients }</ul>
+        <ol>{ instructions }</ol>
+        <div><a href="#" alt="recipe source">{ recipe[0].source }</a></div>
       </div>
     );
   }
