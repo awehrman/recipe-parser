@@ -35,11 +35,21 @@ body .container .cell:hover {
   transition: 1s; }
 
 body .container .recipe {
-  background: lightsalmon;
-  width: 100%; }
+  width: 100%;
+  padding: 5%;
+  text-align: center; }
+
+body .container .recipe img {
+  max-width: 100%; }
+
+body .container .recipe ol, body .container .recipe ul {
+  text-align: left; }
 
 body .container .recipe .unvalidated {
-  background: red; }
+  background: goldenrod; }
+
+body .container .recipe .unparsed {
+  background: crimson; }
 
 @media screen and (min-width: 600px) {
   .cell {

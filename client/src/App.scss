@@ -41,11 +41,24 @@ body {
   	}
 
   	.recipe {
-	    background: lightsalmon;
 	    width: 100%;
+	    padding: 5%;
+	    text-align: center;
+
+	    img {
+	    	max-width: 100%;
+	    }
+
+	    ol, ul {
+	    	text-align: left;
+	    }
 
 	    .unvalidated {
-	    	background: red;
+	    	background: goldenrod;
+	    }
+
+	    .unparsed {
+	    	background: crimson;
 	    }
 		}
 	}

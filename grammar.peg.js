@@ -13,8 +13,8 @@ ingredientLine
     ingredientDesc:multipleIngredientDesc
     ignore?
     ingredient:trimmedIngredient
-    //ignore?
-    //comment:(comment)? [\n]?
+    ignore?
+    comment:(comment)? [\n]?
     {
       return {
         amount: amount,
@@ -113,6 +113,7 @@ ignore
   / $(ws* "an" ws+)
   / $(ws* "of" ws+)
   / $(ws* "for" ws+)
+  / $(ws* "the" ws+)
 
 phrase
   = $(word (space word)*)
@@ -282,6 +283,7 @@ imprecise_unit
 / 'pinches'i
 / 'handful'i
 / 'bunches'i
+/ 'fillets'i
 / 'splash'i
 / 'inches'i
 / 'rounds'i
@@ -299,6 +301,7 @@ imprecise_unit
 / 'recipe'i
 / 'loaves'i
 / 'cloves'i
+/ 'fillet'i
 / 'sheet'i
 / 'piece'i
 / 'extra'i
@@ -324,6 +327,7 @@ imprecise_unit
 / 'loave'i
 / 'packs'i
 / 'clove'i
+/ 'part'i
 / 'loaf'i
 / 'glug'i
 / 'inch'i
@@ -376,6 +380,7 @@ ingredientDesc
 / 'low-sodium'i
 / 'low sodium'i
 / 'vine-ripe'i
+/ 'grass-fed'i
 / 'thick cut'i
 / 'uncooked'i
 / 'boneless'i
@@ -389,6 +394,8 @@ ingredientDesc
 / 'homemade'i
 / 'coarsely'i
 / 'softened'i
+/ 'homemade'i
+/ 'skinless'i
 / 'quality'i
 / 'organic'i
 / 'skin-on'i
@@ -475,8 +482,10 @@ comment
   }
   
 trimmedIngredient
- = ingredient:reservedPhrase reserved:reservedComment { return { ingredient: ingredient, reserved: reserved }}
- / ingredient:ingredientPhrase { return { ingredient: ingredient }}
+ = ingredient:reservedPhrase $(ws? ','+ ws)* reserved:reservedComment { return { ingredient: ingredient, reserved: reserved }}
+ / ingredient:reservedPhrase $(ws? '('+ ws)* reserved:reservedComment $(ws? ')'+ ws)* { return { ingredient: ingredient, reserved: reserved }}
+ / ingredient:reservedPhrase reserved:comment { return { ingredient: ingredient, reserved: reserved }}
+ / ingredient:ingredientPhrase { return { ingredient: ingredient, reserved: null }}
 
 ingredientPhrase
  = phrase:phrase {
@@ -525,6 +534,7 @@ reservedPhraseConjunctionSLASH
 reservedComment
  = 'for shaping the dough'i
  / 'to dust the pizza peel'i
+ / 'for deep-frying'i
  / 'for dressing'i
  / 'for deep frying'i
  / 'for drizzling'i
@@ -542,5 +552,6 @@ reservedComment
  / 'to serve'i
  / 'for binding'i
  / 'to drizzle'i
+ / 'to sprinkle'i
  / 'to grate'i
  / 'divided'i

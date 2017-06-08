@@ -4,9 +4,6 @@ const uuid = require('node-uuid');
 const cheerio = require('cheerio');
 const parser = require('./parser');
 
-const ING_LINE_CHARACTER_LIMIT = 110;
-const ING_CHARACTER_LIMIT = 30;
-
 const importPath = path.join(__dirname, 'data/import/');
 const outputPath = path.join(__dirname, 'data/output/');
 
@@ -58,11 +55,12 @@ const sanitizeEncoding = (line) => {
   //reduce multiple spaces to a single space
   line = line.replace(/ +(?= )/g, ' ');
 
+  //substitute known wonky and accented characters
 	for (let ci = 0; ci < line.length; ci++) {
     let char = line.charCodeAt(ci);
     if (char >= 128) {
     	switch(char) {
-    		case 160:
+    		case 160: //(╯°□°）╯︵ ┻━┻
     			line = line.substr(0, ci) + ' ' + line.substr(ci + 1);
     			break;
     		case 8260:
@@ -97,12 +95,15 @@ const parseRecipe = (file, id) => {
 	let ingredients = [];
 	let instructions = [];
 	let source;
+  let imgFormat;
 
+  // load our file into cheerio so we can parse the html structure
 	$ = cheerio.load(fs.readFileSync(importPath + file));
 	let depth = $('div').find('div').length;
   let level = $('div');
 
   // make sure we're at the root level of our recipe
+  // some older notes still have weird formatting that causes a slightly different rendered html structure
   if (depth !== 0) {
     level = $('div').find('div');
   }
@@ -112,66 +113,101 @@ const parseRecipe = (file, id) => {
 
   const body = $('body').children();
 
+  // our running assumption wil be that instructions will be on a single line, whereas ingredients will be blocked together:
+
+  // ing
+  // ing
+  // ing
+  //
+  // ing
+  // ing
+  // ing
+  //
+  // instr
+  //
+  // instr
+  //
+  // instr
+
   // loop through our DOM elements and create a 2D array that hold groups of lines separated by <br/> tags
   // each array inside this array should contain a group of ingredients or a single instruction line
-  // ex: [ [ing, ing, ing], [ing, ing, ing], [instr], [instr], [instr], [instr]]
+
+  // ex: [ [ing, ing, ing], [ing, ing, ing], [instr], [instr], [instr]]
+
   body.map((i, el) => {
   	el.children.map((child) => {
   		if (child.name === 'br') {
   			childArray = [];
   			recipeArray.push(childArray);
   		} else if (child.data !== undefined && child.data.trim().length > 0) {
-  			childArray.push(child.data);
+        childArray.push(child.data.replace(/\s+/g,' ').trim());
   		}
+
+      //check for deeper nesting
+      if (child.children !== undefined) {
+        if (child.children[0] !== undefined) {
+          if (child.children[0].name === 'br') {
+            childArray = [];
+            recipeArray.push(childArray);
+          } else if (child.children[0].data !== undefined && child.children[0].data.trim().length > 0) {
+            childArray.push(child.children[0].data.replace(/\s+/g,' ').trim());
+          }
+        }
+      }
   	});
   });
 
-  //console.log(recipeArray);
-
-  //now lets loop through our recipeArray and any inner array with a length > 1 we'll try to parse out into an ingredientObject
+  // now lets loop through our recipeArray and any inner array with a length > 1 we'll try to parse out into an ingredientObject
   for (let index in recipeArray) {
   	let block = recipeArray[index];
 
-  	//parse as ingredient
+  	// parse as ingredient
   	if (block.length > 1) {
-  		let blockIngredients = block.map(line => {
+  		let blockIngredients = block.map((line, lineNum) => {
+        // clean up known weird characters that the parser might choke on
   			line = sanitizeEncoding(line);
 
     		let ingredientObject;
 
+        // attempt to parse the ingredient line...
     		try {
     			ingredientObject = parser.parse(line.toLowerCase());
-    			ingredientObject.ref = line;
+          ingredientObject.block = parseInt(index, 10); //preserve what ingredient group it's in
+          ingredientObject.order = lineNum;
+    			ingredientObject.ref = line; //preserve the the unparsed line reference
     			ingredientObject.parsed = true;
 
-    			//check for valid ingredients
+    			// check for valid ingredients
     			ingredientObject.ingredient.names.forEach((ing, index) => {
-    				const ingredientDB = fs.readFileSync('./ingredients.json', 'utf-8');
+            // open up our fake db connection to our known valid ingredients
+    				const ingredientDB = fs.readFileSync('./db/ingredients.json', 'utf-8');
 
 						if (ingredientDB.includes(ing)) {
-    					ingredientObject.ingredient[index] = { name: ing, validated: true };
+              // TODO assign ingredient keys to that data store
+              // we'll just slap a unique id on it for the time being so the front end has something unique to work with for keys
+    					ingredientObject.ingredient.names[index] = { ingredient_id: uuid.v1(), name: ing, validated: true };
 						} else {
-    					//flag this new ingredient as unverified
-    					ingredientObject.ingredient[index] = { name: ing, validated: false };
+    					// if we didn't find this pre-approved ingredient, flag it as unverified
+    					ingredientObject.ingredient.names[index] = { ingredient_id: uuid.v1(), name: ing, validated: false };
 
-    					//and update the pendingDB with new instances of wonky parsed ingredients
-  						const pendingDB = fs.readFileSync('./pendingIngredients.json', 'utf-8');
+              // open up our fake db connection to our unknown ingredient list
+  						const pendingDB = fs.readFileSync('./db/pendingIngredients.json', 'utf-8');
+              let data = JSON.parse(pendingDB);
 
-  						//TODO add a count to the pending ingredients so we know how often these phrases occur
-  						let data = JSON.parse(pendingDB);
+              // check to see if we've seen this unknown ingredient before in other recipes
+              // and either insert it if its new, or bump up the count if we've encountered this in other recipes
 
               if (!pendingDB.includes(ing)) {
 	              data.push({ ingredient: ing, count: 0, recipes: [id], ref: [line] });
 	            } else {
-	            	//update count
-	            	data = JSON.parse(pendingDB);
+	            	// update count
 	            	for (let d in data) {
 	            		if (data[d].ingredient === ing) {
 	            			data[d].count += 1;
 	            			let recipes = data[d].recipes;
 	            			recipes.push(id);
 	            			let ref = data[d].ref;
-	            			ref.push(line)
+	            			ref.push(line);
 
 	            			data[d].recipes = recipes;
 	            			data[d].ref = ref;
@@ -179,33 +215,55 @@ const parseRecipe = (file, id) => {
 	            	}
 	            }
 
-              fs.writeFileSync('./pendingIngredients.json', JSON.stringify(data, null, 2), 'utf8', function (err) {
+              // and re-save our fake database
+              fs.writeFileSync('./db/pendingIngredients.json', JSON.stringify(data, null, 2), 'utf8', function (err) {
 						    if (err) return console.log(err);
 						  });
 
     				}
     			});
     		} catch (ex) {
+          //if the parser fell over for whatever reason, we'll flag this ingredient line as unparsed
     			ingredientObject = {
+            block: parseInt(index, 10),
+            order: lineNum,
     				ref: line,
     				parsed: false
     			}
+
+          // open up a fake db connection to our running list of parser fuck ups
+          const errorsDB = fs.readFileSync('./db/parsingErrors.json', 'utf-8');
+          let data = JSON.parse(errorsDB);
+
+          // TODO add a count to the pending ingredients so we know how often these phrases occur
+
+          data.push({ ref: line, id: id });
+
+          // and re-save the file so we can reference what kinds of sentence structures don't get parsed
+          fs.writeFileSync('./db/parsingErrors.json', JSON.stringify(data, null, 2), 'utf8', function (err) {
+            if (err) return console.log(err);
+          });
     		}
 
   			return ingredientObject;
   		});
+
+      // add our ingredient object to the current block in this recipe
   		ingredients.push(blockIngredients);
   	} else {
-  		instructions.push(block[0]);
+      // if we're not in a block, then we'll just assume its an instruction
+      if (block[0] !== undefined) {
+        instructions.push(block[0]);
+      }
   	}
   }
 
-  //flatten our ingredients array
+  // flatten our ingredients array
   ingredients = [].concat.apply([], ingredients);
 
-	// lookup the source-url from the meta tags
-	const meta = $('meta')
-  const keys = Object.keys(meta)
+	// lookup the source-url from the meta tags in the header
+	const meta = $('meta');
+  const keys = Object.keys(meta);
 
   keys.forEach(function(key){
     if (meta[key].attribs && meta[key].attribs.name && meta[key].attribs.name === 'source-url') {
@@ -213,12 +271,12 @@ const parseRecipe = (file, id) => {
     }
   });
 
-  // lookup image if available
-  let imgFormat;
+  // lookup image format (the image will get re-nammed with our recipe id so we just need the file format)
   if ($('img').attr('src') !== undefined) {
   	imgFormat = $('img').attr('src').split('.').pop();
   }
 
+  // and hand back our nicely parsed out recipe object
 	return {
 		title: $('title').text(),
 		source: source,
@@ -228,6 +286,7 @@ const parseRecipe = (file, id) => {
 	};
 };
 
+// html in, json out
 const importHtml = (file, id) => {
 	return new Promise((resolve, reject) => {
 		fs.readFile(importPath + file, 'utf-8', (err, data) => {
@@ -253,6 +312,9 @@ const importHtml = (file, id) => {
 const importImg = (imgPath, img, id, index) => {
 	return new Promise((resolve, reject) => {
 		const fileExt = img.split('.').pop();
+
+    // TODO check for the existence of the images directory and if it doesn't exist create it
+
 		// rename image and move it to the output
     copyFile(imgPath + '/' + img, outputPath + ('images/' + id + ((index) ? '-' + index + '.' + fileExt : '.' + fileExt)), (err) => {
       if (err) return reject(err);
@@ -261,6 +323,9 @@ const importImg = (imgPath, img, id, index) => {
     });
 	})
 };
+
+
+// THE FUN STARTS HERE
 
 let pendingContent = [];
 let pendingImages = [];
@@ -286,7 +351,7 @@ files.forEach((file, index, collection) => {
 		} else {
 			// otherwise create a new id and add it to the pendingContent array
 			id = uuid.v1();
-			pendingContent.push({ id: id, path: filename});
+			pendingContent.push({ id: id, path: filename });
 		}
 
 		importHtml(file, id)
@@ -299,18 +364,18 @@ files.forEach((file, index, collection) => {
 			  recipesCollection.push(recipe);
 			})
 			.then(data => {
-				//copy original to archive
-				//console.log('archiving file');
+				// TODO copy original file to archive
 
-				//remove file
+				// remove the file from the import directory
 				console.log('removing file ' + filePath);
 				fs.unlinkSync(filePath);
 			})
 			.then(() => {
+        // when we're totally done we'll combine all the recipes into a single json to use as a fake db for the front end
 				// generate the master file if we're at the end of our import
 				importedCount++;
 
-				if (importedCount === ((collection.length + 1) / 2)) {
+				if (importedCount === ((collection.length) / 2)) {
 					// save recipe master
 					fs.writeFileSync('./data/output/_master.json', JSON.stringify(recipesCollection, null, 2), 'utf8', function (err) {
 				    if (err) return console.log(err);
@@ -322,6 +387,7 @@ files.forEach((file, index, collection) => {
 			.catch(console.error);
 	}
 
+  // if we're handed a dircetory instead of a file then its the associated img data
 	if (fileType === 'resources') {
 		// determine if we've imported this recipe's content data yet or not
 		const contentImported = pendingContent.filter(data => data.path.includes(filename));
@@ -342,6 +408,7 @@ files.forEach((file, index, collection) => {
 			importImg(importPath + file, img, id, index)
 			.then(() => {
 				if (index + 1 === numImages) {
+          // TODO archive imgs
 					console.log('removing image directory ' + filePath);
 					removeDirectoryContents(filePath);
 				}

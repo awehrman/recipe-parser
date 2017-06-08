@@ -71,7 +71,20 @@ class App extends Component {
     });
   }
 
-  recipe(rp) {
+  generateParsedIngredientLine(ing) {
+    return (
+      <li>
+        <span className="amount">{ ing.amount } </span>
+        <span className="unitDesc">{ ing.unitDesc } </span>
+        <span className="unit">{ ing.unit } </span>
+        <span className="ingredientDesc">{ ing.ingredientDesc } </span>
+        { ing.ingredient.names.map( i => <span className={ (i.validated) ? 'ingredient' : 'unvalidated ingredient' }> { i.name } </span> ) }
+        <span className="comment">{ ing.comment } </span>
+      </li>
+    );
+  }
+
+  displayRecipe(rp) {
     let order = 0;
 
     switch(this.state.numActiveColumns) {
@@ -109,34 +122,33 @@ class App extends Component {
 
     const recipe = recipes.filter(r => rp === r.id );
     const ingredients = recipe[0].ingredients.map((ing) => {
-      return (
-        <li>
-          <span className="amount">{ ing.amount } </span>
-          <span className="unitDesc">{ ing.unitDesc } </span>
-          <span className="unit">{ ing.unit } </span>
-          <span className="ingredientDesc">{ ing.ingredientDesc } </span>
-          { ing.ingredient.map( i => <span className={ (i.validated) ? 'ingredient' : 'unvalidated ingredient' }> { i.name } </span> ) }
-          <span className="comment">{ ing.comment } </span>
-        </li>
-      );
+      if (ing.hasOwnProperty('ingredient')) {
+        return this.generateParsedIngredientLine(ing);
+      } else {
+        return (
+          <li>
+            <span className="ref unparsed">{ ing.ref } </span>
+          </li>
+        );
+      }
     });
+
     const instructions = recipe[0].instructions.map((instr) => {
       return <li>{ instr }</li>;
     });
 
-
     return (
       <div className="recipe" style={ orderStyling }>
+        <img src={ './images/' + recipe[0].imgPath } alt={ recipe[0].title } />
         <h1>{ recipe[0].title }</h1>
+        <div><a href="#" alt="recipe source">{ recipe[0].source }</a></div>
         <ul>{ ingredients }</ul>
         <ol>{ instructions }</ol>
-        <div><a href="#" alt="recipe source">{ recipe[0].source }</a></div>
       </div>
     );
   }
 
   generateRecipeList() {
-
     return recipes.map((rp, index) => {
       const orderStyling = {
         order: index * 10
@@ -156,7 +168,7 @@ class App extends Component {
       <div className="container">
         <div className="grid">
           { this.generateRecipeList() }
-          { (this.state.show) ? this.recipe(this.state.currentID) : null }
+          { (this.state.show) ? this.displayRecipe(this.state.currentID) : null }
         </div>
       </div>
     );
