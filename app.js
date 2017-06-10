@@ -367,7 +367,7 @@ files.forEach((file, index, collection) => {
 				// TODO copy original file to archive
 
 				// remove the file from the import directory
-				console.log('removing file ' + filePath);
+				//console.log('removing file ' + filePath);
 				fs.unlinkSync(filePath);
 			})
 			.then(() => {
@@ -375,7 +375,7 @@ files.forEach((file, index, collection) => {
 				// generate the master file if we're at the end of our import
 				importedCount++;
 
-				if (importedCount === ((collection.length) / 2)) {
+				if (importedCount === Math.ceil((collection.length) / 2)) {
 					// save recipe master
 					fs.writeFileSync('./data/output/_master.json', JSON.stringify(recipesCollection, null, 2), 'utf8', function (err) {
 				    if (err) return console.log(err);
@@ -409,7 +409,7 @@ files.forEach((file, index, collection) => {
 			.then(() => {
 				if (index + 1 === numImages) {
           // TODO archive imgs
-					console.log('removing image directory ' + filePath);
+					//console.log('removing image directory ' + filePath);
 					removeDirectoryContents(filePath);
 				}
 			})
